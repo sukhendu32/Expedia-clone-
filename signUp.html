@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      #logoStrip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        box-shadow: 0px 1px 0px 0px rgb(0 11 38 / 12%);
+      }
+      #logoStrip img {
+        width: 135px;
+      }
+      #formContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      form > div:first-child {
+        text-align: left;
+        padding: 24px 0 12px;
+        color: #141d38;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+        max-width: 28rem;
+      }
+      value {
+        margin: 12px 0;
+        padding: 16px 12px;
+        border-radius: 0.5rem;
+        border: 1px solid #727483;
+      }
+      .checkBoxDiv {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin: 10px 0 0;
+      }
+      .checkBoxDiv2 {
+        margin: 15px 0 15px;
+        /* border: 1px solid #000; */
+      }
+      .checkBox {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+      }
+      .checkBox:hover {
+        cursor: pointer;
+      }
+      .checkBoxDiv + div {
+        font-size: 14px;
+      }
+      p {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      .termsAndCondition {
+        color: #3662d8;
+      }
+      .termsAndCondition:hover {
+        text-decoration: underline;
+      }
+      #submit {
+        background-color: #3662d8;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      #submit:hover {
+        cursor: pointer;
+      }
+      form > div:last-child {
+        margin: 10px auto 50px;
+      }
+      form > div:last-child > a {
+        color: #3662d8;
+        text-decoration: none;
+      }
+      form > div:last-child > a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="logoStrip">
+      <img
+        src="https://www.expedia.co.in/_dms/interstitial/logo.svg?locale=en_GB&siteid=27"
+      />
+    </div>
+    <div id="formContainer">
+      <form>
+        <div>
+          <h1>Create an account</h1>
+        </div>
+        <value type="email" id="email" placeholder="Email address" required />
+        <value type="text" id="firstName" placeholder="First name" required />
+        <value type="text" id="Surname" placeholder="Surname" required />
+        <value type="password" id="password" placeholder="Password" />
+        <div class="checkBoxDiv">
+          <value type="checkbox" class="checkBox" />
+          <span>Keep me signed in</span>
+        </div>
+        <div>
+          Selecting this checkbox will keep you signed into your account on this
+          device until you sign out. Do not select this on shared devices.
+        </div>
+        <div class="checkBoxDiv2">
+          <value type="checkbox" class="checkBox" />
+          <span
+            >I'd like to receive travel deals, special offers and other
+            information from Expedia via email.</span
+          >
+        </div>
+        <div>
+          <p>
+            By creating an account, I agree to the Expedia
+            <span class="termsAndCondition">Terms and Conditions</span>,
+            <span class="termsAndCondition">Privacy Statement</span> and
+            <span class="termsAndCondition"
+              >Expedia Rewards Terms and Conditions</span
+            >
+            .
+          </p>
+        </div>
+        <value type="submit" value="Continue" id="submit" />
+        <div>Already have an a account? <a href="signin.html">Sing in</a></div>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  let formTag = document.querySelector("form");
+  formTag.addEventListener("submit", getDataFromSignUp);
+  let userArrFromSignUp = JSON.parse(localStorage.getItem("signupData")) || [];
+
+  //function to get data from sign up form and store it in localStorage.
+  function getDataFromSignUp() {
+    event.preventDefault();
+    let userObjFromSignUp = {
+      signUpEmail: formTag.email.value,
+      signUpFirstName: formTag.firstName.value,
+      signUpSurname: formTag.Surname.value,
+      signUpPassword: formTag.password.value,
+    };
+    if (checkIfEmailExists(userObjFromSignUp.signUpEmail)) {
+      userArrFromSignUp.push(userObjFromSignUp);
+      localStorage.setItem("signupData", JSON.stringify(userArrFromSignUp));
+      alert(
+        "Signup successful. You can sign in by clicking on the sign in option"
+      );
+    } else {
+      alert("Account already exists with this email");
+    }
+  }
+
+  //function that checks if the account with same email is exist or not.
+  function checkIfEmailExists(email) {
+    let filtered = userArrFromSignUp.filter(function (elem) {
+      return elem.signUpEmail === email;
+    });
+    if (filtered.length > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+</script>
