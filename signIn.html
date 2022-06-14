@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/63c7c4276d.js" crossorigin="anonymous"></script>
     <title>Sign in</title>
     <style>
       * {
@@ -99,10 +100,17 @@
       form > div:last-child > a:hover {
         text-decoration: underline;
       }
+      .fa-solid {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        color: #3662d8;
+      }
     </style>
   </head>
   <body>
     <div id="logoStrip">
+      <i class="fa-solid fa-2x fa-arrow-left"></i>
       <img
         src="https://www.expedia.co.in/_dms/interstitial/logo.svg?locale=en_GB&siteid=27"
         alt=""
@@ -128,11 +136,13 @@
             By creating an account, I agree to the Expedia
             <span class="termsAndCondition">Terms and Conditions</span>,
             <span class="termsAndCondition">Privacy Statement</span> and
-            <span class="termsAndCondition">Expedia Rewards Terms and Conditions</span>
+            <span class="termsAndCondition"
+              >Expedia Rewards Terms and Conditions</span
+            >
             .
           </p>
         </div>
-        <input type="submit" value="Sign in" id="submit"/>
+        <input type="submit" value="Sign in" id="submit" />
         <div>Forgot password?</div>
         <div>Don't have an account? <a href="signUp.html">Create one</a></div>
       </form>
@@ -153,14 +163,17 @@
     let flag = false;
 
     userArrFromLS.forEach(function (elem) {
-      if (signInEmail === elem.signUpEmail && SignInPassword === elem.signUpPassword) {
+      if (
+        signInEmail === elem.signUpEmail &&
+        SignInPassword === elem.signUpPassword
+      ) {
         flag = true;
       }
-    })
+    });
     if (flag) {
-      alert ("Signed in successfully.");
+      alert("Signed in successfully.");
     } else {
-      alert ("Wrong credentials.")
+      alert("Wrong credentials.");
     }
   }
 </script>
