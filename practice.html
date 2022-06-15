@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <style>
+        body{
+            background-color: #f8f5f4;
+        }
+        #navbar{
+            height: 80px;
+            border: 1px solid red;
+            margin-bottom: 20px;
+        }
+        #date{
+            height: 80px;
+            border: 1px solid green;
+            margin-bottom: 20px;
+        }
+        #select{
+            border: 1px solid red;
+            width: 20%;
+            height: 1000px;
+        }
+        #main{
+            margin-top: -1000px;
+        }
+        #main>div{
+            width: 60%;
+            background-color: white;
+            border-radius: 15px;
+            display: flex;           
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        #main>div>img{
+            border-radius: 15px 0px 0px 15px;
+            margin-right: 10px;
+            width: 30%;
+        }
+        #main>div>img+div{
+            width: 55%;
+        }
+        #main>div>img+div>h1{
+            margin-bottom: -10px;
+            font-size: 25px;
+        }
+        #main>div>div:last-child{
+            width: 15%;
+            height: auto;
+            margin: 130px 10px 10px 0px;
+        }
+        #main>div>div:last-child>button{
+            width: 100%;
+            background-color: rgb(13,112,102);
+            border-radius: 5px;
+            color: aliceblue;
+            padding: 5px 10px;
+            margin-bottom: -20px;
+        }
+        #main>div>div>h3{
+            color: rgb(13,112,102);
+            margin: -10px 0px;
+        }
+        #main>div>div>h4:last-child{
+            margin: -20px 0px;
+        }
+
+    </style> 
+</head>
+<body>
+    <div id="navbar">
+    </div>
+
+    <div id="date">
+    </div>
+
+    <div id="select">
+    </div>
+
+    <div id="main">
+        <!-- <div>
+            <img src="https://images.trvl-media.com/hotels/20000000/19220000/19218500/19218418/8be2ba2b.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="error">
+            <div>
+                <h1 class="name">Le Meridien Goa, Calangute</h1>
+                <p>Calangute</p>
+                <p>services</p>
+                <h3>fully refundable</h3>
+                <h4> 4.4/5 </h4>
+                <h4>compliment</h4>
+            </div>
+            <div>
+                <button>we have left</button>
+                <h2>price</h2>
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>
+
+<script>
+    var Data=[
+        {
+            image:"https://images.trvl-media.com/hotels/3000000/2520000/2516300/2516280/36d90ef2.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Novotel Goa Dona Sylvia Hotel",
+            place:"Cavelossim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable",
+            rating:4.3,
+            price:6800,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/440000/438400/438378/bdbe16ac.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"The Leela Goa ",
+            place:"Cavelossim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.7,
+            price:29000,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/670000/663700/663615/08a8dd9d.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Taj Exotic Resort & Spa, Goa",
+            place:"Benaulim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.7,
+            price:23000,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/5000000/4480000/4474800/4474764/2e15d580.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Radisson Blu Resort Goa Cavelossim Beach",
+            place:"Cavelossim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.1,
+            price:8505,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/80000/70600/70518/dce1b7a5.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Bogmallo Beach Resort",
+            place:"Bogmallo",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:3.6,
+            price:7500,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/930000/921600/921574/623993db.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"The LaLiT Golf & Spa Resort Goa",
+            place:"Palolem",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable",
+            rating:3.8,
+            price:10798,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/530000/526400/526340/f5764d77.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Taj Fort Aguada Resort & Spa, Goa",
+            place:"Aguada Fort Area",
+            services:"Breakfast Included + Spa + Air conditioned",
+            payserv:"Fully refundable",
+            rating:4.5,
+            price:20500,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/11000000/10550000/10547600/10547516/b5c4d061.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Planet Hollywood Goa Beach Resort",
+            place:"Uttorda",
+            services:"Free WiFi + Hot Tub + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.2,
+            price:9000,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/25000000/24050000/24041500/24041444/e8849892.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Azaya Beach Resort",
+            place:"Benaulim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4,
+            price:17500,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/78000000/77160000/77152400/77152397/fe050728.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Sea Breeze Max Resort & Spa",
+            place:"Fatrade",
+            services:"Free WiFi + Pool",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.3,
+            price:3500,
+        },
+    ] 
+    
+
+    displayData(Data);
+ 
+    function displayData(Data){
+        document.querySelector("#main").innerHTML="";
+        Data.forEach(function(ele){
+        var box=document.createElement("div");
+            var image=document.createElement("img");
+                image.setAttribute("src",ele.image);
+            var div1=document.createElement("div");
+              var name=document.createElement("h1");
+                  name.innerText=ele.name;
+              var place=document.createElement("p");
+                  place.innerText=ele.place;
+              var services=document.createElement("p");
+                  services.innerText=ele.services;
+              var payserv=document.createElement("h3");
+                  payserv.innerText=ele.payserv;
+              var rate=document.createElement("h4");
+                  rate.innerText=ele.rating+"/5";
+              var comp=document.createElement("h4");
+                  if(Number(ele.rating)>=Number(4.5))
+                      {comp.innerText="Exceptional"
+                      comp.style.color="rgb(25,101,31)"}
+                  else if(Number(ele.rating)>=Number(4.3))
+                      {comp.innerText="Wonderful"
+                       comp.style.color="rgb(38,217,52)"}
+                   else if(Number(ele.rating)>=Number(4))
+                       {comp.innerText="Very Good"
+                       comp.style.color="rgb(234,147,44)"}
+                    else if(Number(ele.rating)<Number(4))
+                       {comp.innerText="Good"
+                         comp.style.color="rgb(244,114,59)"}      
+            var div2=document.createElement("div");
+               var btn=document.createElement("button");
+                   btn.innerText="Book Now Only in"
+               var price=document.createElement("h2");             
+                   price.innerText="Rs "+Number(ele.price);
+                   
+          div1.append(name,place,services,payserv,rate,comp);
+          div2.append(btn,price);
+          box.append(image,div1,div2);
+          document.querySelector("#main").append(box);
+        });
+}
+</script>
