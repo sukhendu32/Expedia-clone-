@@ -31,8 +31,9 @@
             <div>
                 <img src="https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/b819d2bc.jpg?impolicy=resizecrop&rw=297&ra=fit" alt="Error">
                 <button>
-                    <i class="fa-regular fa-images"></i>
-                    45+
+                    
+                    <a href="imageGallary.html"><i class="fa-regular fa-images"></i> 45+</a>
+                    
                 </button>
             </div>
         </div>
@@ -83,12 +84,27 @@
         <h1>Choose your room</h1>
     </div>
     <div id="chooseTime">        
-        <button><i class="fa-solid fa-calendar-day"></i> Check-in</button>
-        <button><i class="fa-solid fa-calendar-day"></i> Check-out</button>
-        <button><i class="fa-solid fa-user"></i> Travellers</button>
-        <button>Check availability</button>
+        <button>             
+            Check-in 
+            <input id="checkIn" type="date">
+        </button>
+        <button>
+             Check-out 
+             <input id="checkOut" type="date">
+        </button>
+        <button>
+            <i class="fa-solid fa-user"></i>
+             Travellers
+        </button>
+        <button id="check">Check availability</button>
     </div>
-    <div id="chooseRoom"></div>
+    <div id="travellersOverlay">
+        <div id="travellers"></div>
+    </div>
+    
+    <div id="chooseRoom">
+        <!-- append your data here -->
+    </div>
 </body>
 <script src="fairfield.js"></script>
 </html>

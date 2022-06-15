@@ -6,13 +6,15 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 }
 :root {
+    --width:80%;
     --font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-synthesis: none;
 }
 #overview{
-    width: 80%;
+    width: var(--width);
     margin: 50px auto; 
     background-color: white;   
 }
@@ -68,13 +70,16 @@ body{
     bottom: 20px;
     right: 20px;
     padding: 5px 15px;
-    background-color:rgba(0, 11, 38, 0.56);
-    color: white;
+    background-color:rgba(0, 11, 38, 0.56);    
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 500;
     border: none;
     border-radius: 10px;
+}
+#imageGallary>div:last-child>button>a{
+    color: white;
+    text-decoration: none;
 }
 #imageGallary>div:last-child>button:hover{
     background-color: rgb(58, 57, 57);
@@ -98,6 +103,7 @@ body{
     cursor: pointer;
 }
 #menu>button{
+    display: flex;
     padding: 10px;
     color: white;
     background-color: #3662d8;
@@ -108,9 +114,7 @@ body{
     padding: 10px 16px;
 }
 #menu>button:hover{
-    background-color: 
-    
-#037bff;
+    background-color:#037bff;
 }
 #details{
     width: 95%;
@@ -170,10 +174,10 @@ body{
     justify-content: flex-end;
 }
 #chooseTime, #chooseHead{
-    width: 80%;
+    width: var(--width);
     margin:auto;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     font-family: var(--font-family);
 }
 #chooseHead>h1{
@@ -181,22 +185,44 @@ body{
 }
 #chooseTime>button{
     font-size: 16px;
-    padding: 20px 10px;
+    padding: 5px 5px;
     background-color: white;
     border-radius: 5px;
     border: 1px solid grey;
 }
 #chooseTime>button:first-child,
 #chooseTime>button:nth-child(2){
-    width: 15%;
+    width: 18%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+#chooseTime>button:first-child>input,
+#chooseTime>button:nth-child(2)>input{
+    width: 47%;
+    font-size: 22px;
+    padding: 2px;
+    margin: 3px;
+    border: none;   
 }
 #chooseTime>button:nth-child(3){
-    width: 40%;
+    width: 35%;
 }
 #chooseTime>button:last-child{
-    width: 26%;
+    width: 25%;
     background-color: #3662d8 ;
     color: white;
     font-weight: 500;
 }
+#travellersOverlay{
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    /* display: none; */
+}
+#travellers{
+    display: flex;
+    
+}
+
 
