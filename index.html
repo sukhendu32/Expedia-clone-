@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expedia Travel: Vacation Homes, Hotels, Car Rental, Flights and More</title>
+
+    <!-- font css -->
+    <link href="//db.onlinewebfonts.com/c/229a57bbeef591e04a1fdfe347c90864?family=Centra+No2" rel="stylesheet"
+        type="text/css" />
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./reset.css">
+
+    <!-- fav icon script file -->
+    <script src="https://kit.fontawesome.com/e3e5135115.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Centra No2', sans-serif;
+            letter-spacing: .4px;
+        }
+
+        .buttonStyle {
+            background-color: #3662D8;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #3662D8;
+        }
+
+        .container {
+            width: 90%;
+            display: flex;
+            align-items: center;
+        }
+
+        #upperNav {
+            background-color: #343B53;
+            color: #fff;
+            padding: 15px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        #upperNav a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        #upperNav a:hover {
+            color: #3662D8;
+        }
+
+
+        nav {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            width: 100%;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            border-bottom: 1px solid #a7a7a7c9;
+            padding-bottom: 10px;
+        }
+
+        nav>.container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            padding: 10px;
+        }
+
+        nav>.container>div:first-child {
+            display: flex;
+            align-items: center;
+        }
+
+        nav>.container>div:first-child>img {
+            margin-right: 10px;
+        }
+
+        nav>.container>div:first-child>p {
+            font-weight: 600;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        nav>.container>div:last-child>a {
+            color: #000000;
+            margin-right: 25px;
+            font-weight: 600;
+            letter-spacing: .4px;
+        }
+
+        nav>.container>div:last-child>a:hover {
+            color: #3662D8;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        nav>.container>div:last-child>a>i {
+            margin-right: 8px;
+        }
+
+        #searchBook {
+            width: 90%;
+            height: 296px;
+            border: 1px solid #a7a7a7c9;
+            display: flex;
+            margin: auto;
+            margin-top: 48px;
+            margin-bottom: 48px;
+            border-radius: .5rem;
+        }
+
+        .imagecontainer {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+
+        .imagecontainer img {
+            width: 100%;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .imagecontainer div {
+            position: absolute;
+            width: 30%;
+            margin-top: 130px;
+            margin-left: 50px;
+
+        }
+
+        .imagecontainer div h1 {
+            font-size: 3rem;
+            font-weight: 1000;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .imagecontainer div p {
+            font-size: 1.2rem;
+            margin-left: 10px;
+            margin-bottom: 16px;
+            letter-spacing: 0px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .imagecontainer div .buttonStyle {
+            margin-left: 10px;
+        }
+
+        .helpDiv {
+            width: 90%;
+            margin: auto;
+            margin-top: 48px;
+            margin-bottom: 48px;
+            border-radius: .5rem;
+        }
+
+        .helpDiv>h1 {
+            font-size: 2rem;
+            font-weight: 1000;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #000000;
+            text-align: left;
+        }
+
+        .helpDiv>div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 20px;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .helpDiv>div>div {
+            padding: 10px;
+            border: 1px solid #a7a7a7c9;
+            border-radius: .5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: top;
+            justify-content: space-between;
+
+        }
+
+        .helpDiv>div>div>i {
+            margin-top: 10px;
+        }
+
+        .helpDiv>div>div>div>h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .helpDiv>div>div>div>p {
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .imageCard {
+            width: 90%;
+            margin: auto;
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        .imageCard>div:first-child {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 48px;
+            margin-top: 85px;
+        }
+
+        .imageCard>div:first-child>div {
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+
+
+        .imageCard>div:first-child>div>p {
+            font-size: .8rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            letter-spacing: 0px;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .imageCard>div:first-child>div>h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .imageCard>div:first-child>div>img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .imageCard>div:last-child {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 48px;
+            margin-top: 85px;
+        }
+
+        .imageCard>div:last-child>div>img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+
+        .imageCard>div:last-child>div {
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+
+
+        .imageCard>div:last-child>div>p {
+            font-size: .8rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            letter-spacing: 0px;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .imageCard>div:last-child>div>h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .newsletterCard {
+            width: 90%;
+            margin: auto;
+            margin-top: 48px;
+            margin-bottom: 48px;
+            display: grid;
+            grid-template-columns: 3fr 5fr 1fr;
+            justify-content: space-between;
+            gap: 20px;
+            border: 1px solid #a7a7a7c9;
+            border-radius: 8px;
+        }
+
+        .newsletterCard>img {
+            width: 100%;
+        }
+
+        .newsletterCard>#bRadius {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .newsletterCard>div {
+            padding: 25px 10px;
+        }
+
+        .newsletterCard>div>h1 {
+            font-size: 1.5rem;
+            font-weight: 1000;
+            margin-bottom: 7px;
+            color: #000000;
+        }
+
+        .newsletterCard>div>p {
+            font-size: .9rem;
+            margin-bottom: 25px;
+            color: #000000;
+        }
+
+        .newsletterCard>div>h2 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        .newsletterCard>div>h6 {
+            font-size: .8rem;
+            color: #000000;
+        }
+
+        .newsletterCard>div>div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+
+        }
+
+        .newsletterCard>div>div>input,
+        select {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #a7a7a7c9;
+            padding: 14px 8px;
+        }
+
+        .newsletterCard>div>div>input {
+            width: 90%;
+        }
+
+        .newsletterCard>#qrcode {
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .quote {
+            width: 90%;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            text-align: center;
+
+        }
+
+        .quote>p {
+            margin-bottom: 5px;
+            font-size: .9rem;
+        }
+
+        .quote>a {
+            font-size: .9rem;
+            text-decoration: underline;
+        }
+
+        footer{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+
+        footer>div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer>div>img{
+            width: 80%;
+        }
+        footer>div>h2{
+            font-size: .85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        footer>div>a{
+            font-size: .75rem;
+            margin-bottom: 15px;
+        }
+
+        footer>div>a:hover{
+            text-decoration: underline;
+        }
+        hr{
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #a7a7a7c9;
+        }
+
+        .bottomFooter{
+            text-align: center;
+            font-size: .75rem;
+            margin-top: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .bottomFooter>h6{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- upper nav -->
+    <div id="upperNav">
+        Welcome to Expedia.com. Continue to the <b>India site</b> at
+        <a href="expedia.co.in.">Expedia.co.in.</a>
+    </div>
+
+    <!-- navbar -->
+    <nav>
+        <div class="container">
+            <div>
+                <img src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1&2" alt="logo">
+                <p>More travel </p>
+            </div>
+            <div>
+                <a href="#"><i class="fa-solid fa-globe"></i> English</a>
+                <a href="#">List your property</a>
+                <a href="#">Support</a>
+                <a href="#">Trips</a>
+                <a href="#">Sign In</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- search booking section -->
+    <div id="searchBook">
+
+    </div>
+
+    <!-- text and main image -->
+    <div class="imagecontainer">
+        <img src="https://a.travel-assets.com/travel-assets-manager/cmct-5183/US-CA-MX-HP-Hero-928x398.jpg" alt="">
+        <div>
+            <h1>The US lifts COVID-19 testing</h1>
+            <p>Getting back into the States just got easier, as COVID-19 tests are no longer required.
+            </p>
+            <button class="buttonStyle">see more of the world</button>
+        </div>
+    </div>
+
+    <!-- help div -->
+    <div class="helpDiv">
+        <h1>Here to help keep you on the move</h1>
+        <div>
+            <div>
+                <div>
+                    <h3>Change or cancel a trip</h3>
+                    <p>Make updates to your itinerary or cancel a booking</p>
+                </div>
+                <i class="fa-solid fa-pen"></i>
+            </div>
+            <div>
+                <div>
+                    <h3>Use a credit or coupon</h3>
+                    <p>Apply a coupon code or credit to a new trip</p>
+                </div>
+
+                <i class="fa-solid fa-pen"></i>
+                <!-- <i class="fa-solid fa-circle-dollar"></i> -->
+            </div>
+            <div>
+                <div>
+                    <h3>Track your refund </h3>
+                    <p> Check the status of a refund currently in progress</p>
+                </div>
+
+                <i class="fa-solid fa-pen"></i>
+                <!-- <i class="fa-solid fa-message-dots"></i> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- image card -->
+    <div class="imageCard">
+        <div class="3imageCard">
+            <div>
+                <img src="https://a.travel-assets.com/travel-assets-manager/egip-collections/zvrbYGu.jpg?impolicy=fcrop&w=600&h=400&p=1&q=high"
+                    alt="BEACHES">
+                <p>BEACHES</p>
+                <h3>Breathe in those beach vibes </h3>
+            </div>
+            <div>
+                <img src="https://a.travel-assets.com/travel-assets-manager/egip-collections/Ss1epnX.jpg?impolicy=fcrop&w=600&h=400&p=1&q=high"
+                    alt="BEACHES">
+                <p>URBAN ESCAPES</p>
+                <h3>Hit the town</h3>
+            </div>
+            <div>
+                <img src="https://a.travel-assets.com/travel-assets-manager/cmct-5255/POSa-HP-Editorial-3up-384x256-1.jpg"
+                    alt="BEACHES">
+                <p>TRAVEL SMARTER</p>
+                <h3>Save instantly with Expedia Rewards</h3>
+            </div>
+        </div>
+        <div class="2imageCard">
+            <div>
+                <img src="https://a.travel-assets.com/travel-assets-manager/cmct-5157/US-CA-MX-HP-Editorial-2up-457x257.jpg"
+                    alt="BEACHES">
+                <p>FOR THE LOVE OF SUMMER</p>
+                <h3>Chase the sun to someplace extraordinary</h3>
+            </div>
+            <div>
+                <img src="https://a.travel-assets.com/travel-assets-manager/cmct-5276/US-HP-Edi-2UP-457x257.jpg"
+                    alt="BEACHES">
+                <p>OFF & AWAY</p>
+                <h3>Grab a 25% off coupon—only in the app. Terms apply.</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- newsletter card -->
+    <div class="newsletterCard">
+        <img id="bRadius" src="https://a.travel-assets.com/mad-service/footer/bnaBanners/BEX_ROME_iStock_72dpi.jpg"
+            alt="newsletterCard">
+        <div>
+            <h1>Our app takes you further</h1>
+            <p>When you book on the app you can save up to 25% on select hotels while earning double the points with
+                every booking. With these app deals you'll save even more on trips, and that means you can take more
+                trips, and manage it all on the go.</p>
+            <h2>Text yourself a download link for easy access</h2>
+            <div>
+                <select name="Country Code" id="">
+                    <option value="">USA +1</option>
+                    <option value="">Ind +91</option>
+                    <option value="">USA +1</option>
+                </select>
+                <input type="number" placeholder="Phone Number">
+                <button class="buttonStyle">Get the app</button>
+            </div>
+            <h6>By providing your number, you agree to receive a one-time automated text message with a link to get the
+                app. Standard text message rates may apply</h6>
+        </div>
+        <img id="qrcode" src="https://a.travel-assets.com/mad-service/qr-code/footer_qr_hp/1_QR_FOOTER_HP.png"
+            alt="qr code">
+    </div>
+
+    <!-- quote div -->
+    <div class="quote">
+        <p>Be inspired and discover more with Expedia</p>
+        <a href="#">Discover new places and experiences</a>
+    </div>
+
+    <!-- footer part Expedia -->
+    <footer>
+        <div>
+            <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
+                alt="">
+        </div>
+        <div>
+            <h2>Company</h2>
+            <a href="#">About</a>
+            <a href="#">Jobs</a>
+            <a href="#">List your property</a>
+            <a href="#">Partnerships</a>
+            <a href="#">Newsroom</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Advertising</a>
+        </div>
+        <div>
+            <h2>Explore</h2>
+            <a href="#">United States of America travel guide</a>
+            <a href="#">Hotels in United States of America</a>
+            <a href="#">Vacation rentals in United States of America</a>
+            <a href="#">Vacation packages in United States of America</a>
+            <a href="#">Domestic flights</a>
+            <a href="#">Car rentals in United States of America</a>
+            <a href="#">All accommodation types</a>
+        </div>
+        <div>
+            <h2>Terms and Policies</h2>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Vrbo terms and conditions</a>
+            <a href="#">Expedia Rewards Terms</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Do not sell my personal information</a>
+        </div>
+        <div>
+            <h2>Help</h2>
+            <a href="#">Support</a>
+            <a href="#">Cancel your hotel or vacation rental booking</a>
+            <a href="#">Cancel your flight</a>
+            <a href="#">Refund timelines, policies & processes</a>
+            <a href="#">Use an Expedia coupon</a>
+            <a href="#">International travel documents</a>
+        </div>
+    </footer>
+    <hr>
+
+    <div class="bottomFooter">
+        <h6>Expedia, Inc. is not responsible for content on external Web sites.</h6>
+        <h6>© 2022 Expedia, Inc., an Expedia Group company. All rights reserved. Expedia and the Airplane Logo are trademarks or registered trademarks of Expedia, Inc. CST# 2029030-50.</h6>
+    </div>
+
+</body>
+
+<script>
+
+</script>
+
+</html>
