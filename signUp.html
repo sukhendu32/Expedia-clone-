@@ -166,8 +166,9 @@
       userArrFromSignUp.push(userObjFromSignUp);
       localStorage.setItem("signupData", JSON.stringify(userArrFromSignUp));
       alert(
-        "Signup successful. You can sign in by clicking on the sign in option"
+        "Signup successful. Please sign in to continue"
       );
+      // window.location.href = "siunIn.html";
     } else {
       alert("Account already exists with this email");
     }
