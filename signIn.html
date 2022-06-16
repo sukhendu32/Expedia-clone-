@@ -159,22 +159,24 @@
     event.preventDefault();
     
     let signInData = {
-      signInEmail = formTag.email.value;
-      signInPassword = formTag.password.value;
+      signInEmail: formTag.email.value,
+      signInPassword: formTag.password.value
     }
-    let flag = false;
-
-    userArrFromLS.forEach(function (elem) {
+    let userObj = false;
+    
+    for (let i = 0; i < userArrFromLS.length; i++) {
       if (
-        signInData.signInEmail === elem.signUpEmail &&
-        signInData.signInPassword === elem.signUpPassword
+        signInData.signInEmail === userArrFromLS[i].signUpEmail &&
+        signInData.signInPassword === userArrFromLS[i].signUpPassword
       ) {
-        flag = true;
+        userObj = userArrFromLS[i];
+        break;
       }
-    });
-    if (flag) {
+    };
+    if (userObj !== false) {
+      localStorage.setItem("signInObj", JSON.stringify(userObj));
       alert("Signed in successfully.");
-      localStorage.signInData("signInObj", JSON.stringify(signInData));
+      // wondow.location.href = "index.html";
     } else {
       alert("Wrong credentials.");
     }
