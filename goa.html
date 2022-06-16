@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script src="https://kit.fontawesome.com/c5b4771c82.js" crossorigin="anonymous"></script>
+  
+    <style>
+   
+        *{
+         font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
+        }
+        body{
+            background-color: #f8f5f4;
+        }
+        #navbar{
+          
+            width: 98%; 
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            height: 80px;
+           margin-top: -10px;
+            background-color: white;
+            padding: 0px 60px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        #navbar>div>img{
+          
+            margin-right: 40px;
+        }
+        #navbar>div>select{
+            width: 150px;
+           margin-bottom: 8px;
+            font-size: 16px;
+            border: 0px;
+            color: rgb(66, 64, 64);
+        }
+
+        #navbar>div+div{
+          
+            color: rgb(67, 65, 65);
+            width: 40%;
+            font-size: 17px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        #navbar>div+div>h4:hover{
+            color: rgb(96, 96, 245);
+        }
+
+        #date{
+            height: 50px;
+            width: 80%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #date>input{
+            font-size: 18px;
+            padding: 0px 20px;
+            border-radius: 10px;
+        }
+        
+       
+        #date>p:first-child>input{
+           
+            margin-left: -8px;
+            padding-left: 40px;
+            width: 400px;
+            height: 50px;
+            margin-top: -15px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+        }
+
+        #date>p:nth-child(1)>i{
+            position: absolute;
+            margin-left: 10px;
+
+        }
+
+        #date>p:nth-child(2)>input{
+            
+           
+            width: 120px;
+            height: 45px;
+            margin-top: -15px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            padding-left: 8px;
+        }
+
+        #date>p:nth-child(2)>i{
+           position: absolute;  
+          margin-left: -30px;
+        }
+
+        #date>p:nth-child(3)>input{
+           
+            width: 120px;
+            height: 45px;
+            margin-top: -15px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            padding-left: 8px;
+        }
+
+        #date>p:nth-child(3)>i{
+            position: absolute;
+             
+          margin-left: -30px;
+        }
+        
+      
+        #date>select{
+            font-size: 18px;
+            padding: 0px 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        #date>button{
+            border: none;
+            width: 120px;
+            font-size:18px;
+            background-color: #3662d8 ;
+            color: white;
+            border-radius: 10px;
+            margin-right: -20px;
+            padding: 0px 20px;
+        }
+        #sortopt{
+            margin: auto;
+            width: 60%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+         #sortopt>div:first-child{
+            display: flex;
+
+            margin-top: 15px;
+         }
+        
+         #sortopt>div:first-child>div{
+            margin-right: 6px;
+            font-size: 18px;
+            font-weight: 700;
+         }
+
+         #sortopt>div:first-child>i{
+            margin-top: 3px;
+         }
+
+        #sortopt>select{
+
+            border-radius: 10px;
+            width: 35%;
+            font-size: 15px;
+            font-weight: bold;
+            color: gray;
+        }
+
+        #sortopt>select>option{
+            font-size: 15px;
+            font-weight: bold;
+            color: gray;
+        }
+
+
+        #leftbox>div>img{
+            margin: 0px;
+            width: 200px;
+            height: 150px;
+            margin-top: -50px;
+            
+        }
+        #leftbox>div:first-child>div{
+          /* border: 1px solid red; */
+          margin: 0px;
+          text-align: center;
+          font-weight: bold;
+          background-color: white;
+          color: rgb(81, 81, 242);
+          font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+          height: 25px;
+          width: 200px;
+
+        }
+        #leftbox{
+            
+            width: 17%;
+            
+            margin-left: 30px;
+        }
+
+        
+        #main{
+            margin-top: -900px;
+        }
+        #leftbox>div>input{
+            display: block;
+        }
+        #main>div{
+            width: 60%;
+            background-color: white;
+            border-radius: 15px;
+            display: flex;           
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        #main>div>img{
+            border-radius: 15px 0px 0px 15px;
+            margin-right: 10px;
+            width: 30%;
+        }
+        #main>div>img+div{
+            width: 55%;
+        }
+        #main>div>img+div>h1{
+            padding-left: 10px;
+            font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            margin-top: 6px;
+        }
+        #main>div>img+div>p{
+            padding-left: 10px;
+            font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            margin-bottom: 10px;
+
+        }
+        #main>div>div:last-child{
+            width: 15%;
+            height: auto;
+            margin: 130px 10px 10px 0px;
+        }
+        #main>div>div:last-child>button{
+            border: 0px;
+            width: 100%;
+            font-weight: bold;
+            background-color: rgb(13,112,102);
+            border-radius: 5px;
+            color: aliceblue;
+            padding: 5px 10px;
+            margin-bottom: -20px;
+        }
+        #main>div>div>h3{
+            color: rgb(13,112,102);
+            /* margin: -5px 0px; */
+        }
+        #main>div>div>h4:last-child{
+            margin: -20px 0px;
+        }
+        #addvert{            
+            
+            margin-left: 85%;
+            margin-top: -2650px;
+        }
+        span{
+            padding-left: 6px;
+        }
+
+       .alignCheckbox{
+        display: flex;
+        margin-top: 6px;
+       }
+       .alignCheckbox>div{
+        padding-left: 8px;
+
+       }
+       #star{
+         display: flex;
+         flex-wrap: wrap;
+       }
+       #star>div{
+        border: 1px solid black;
+       background-color: white;
+        color: rgb(78, 77, 77);
+        padding: 8px;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+       }
+       #star>div:hover{
+        background-color: rgb(192, 188, 188);
+       }
+      h3{
+        font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+     #main h3{
+        /* border: 1px solid red; */
+        font-size: 16px;
+        padding-left: 10px;
+        font-weight: 400;
+        margin-top: 47px;
+        font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+       } 
+
+       #main h4{
+        padding-left: 10px;
+        margin-top: -5px;
+        font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+       }
+
+    </style> 
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" alt="error">
+    
+            <select name="select" id="select">
+                <option value="">More travel</option>
+                <option value="Goa">Goa<i class="fa-solid fa-building" aria-hidden="true"></i></option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Haiderabad">Haiderabad</option>
+            </select>
+        </div>
+        <div>
+            <h4><i class="fa-solid fa-globe"></i> English</h4>
+            <h4>Support</h4>
+            <h4>Trips</h4>
+            <h4><i class="fa-solid fa-bell"></i></h4>
+            <h4>Sign in</h4>
+        </div>
+    </div>
+
+    <div id="date">
+        
+       <p> <i class="fa-solid fa-location-dot"></i><input type="search" placeholder= "going to goa"></p>
+      <p> <input type="text" placeholder="check-in" onfocus="(this. type='date')" ><i class="fa-solid fa-calendar-day"></i></p>  
+      <p> <input type="text" placeholder="check-in" onfocus="(this. type='date')" ><i class="fa-solid fa-calendar-day"></i></p> 
+        
+     <select name="select1" id="select1">
+            <option value="">1 Room + 2 travellers</option>
+            <option value="">2 Room + 2 travellers</option>
+        </select>
+
+    
+        <button>Search</button>
+    </div>
+
+    <div id="sortopt">
+        
+      <div>  <div>See how we pick our recommended properties</div><i class="fa-solid fa-circle-info"></i></div>
+        <select name="select" onchange="rearrange()" id="priceValue">
+            <option value="">sort by Recommended</option>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
+            <option value="rating">Rating</option>
+        </select>
+    </div>
+       
+  
+
+    <div id="leftbox">
+         
+        <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmecHRkEvsE3aLGch6Uw-MN7LYSXyC1LGodQ&usqp=CAU" alt="hotel">
+            <div>View in Map</div>
+        </div>
+         <h2>Filter By</h2>
+         <div>
+            <h3>Price per night</h3>
+
+         <div class="alignCheckbox">  <input type="checkbox"> <div> Less than 2000 </div></div> 
+         <div class="alignCheckbox">  <input type="checkbox"> <div>Rs.2000 To Rs.4000 </div></div>
+         <div class="alignCheckbox">   <input type="checkbox"> <div>Rs.4000 To Rs.8000 </div></div>
+         <div class="alignCheckbox">   <input type="checkbox"> <div>Rs.8000 To Rs.11000 </div></div>
+         <div class="alignCheckbox">   <input type="checkbox"> <div>Above Rs.11000  </div></div>
+         </div>
+         <div>
+            <h3>Guest Rating</h3>
+ 
+            <div class="alignCheckbox">  <input type="checkbox"> <div> Any </div></div> 
+         <div class="alignCheckbox">  <input type="checkbox"> <div>Wonderful 4.5+ </div></div>
+         <div class="alignCheckbox">   <input type="checkbox"> <div>Very good 4+ </div></div>
+         <div class="alignCheckbox">   <input type="checkbox"> <div>Good 3.5+ </div></div>
+         </div>
+         <div>
+            <h3>Payment type</h3>
+  
+            <div class="alignCheckbox">  <input type="checkbox"> <div>Fully refundable </div></div> 
+            <div class="alignCheckbox">  <input type="checkbox"> <div>Reserve now, Pay later </div></div>
+         </div>
+         <div>
+            <h3>Area</h3>
+
+            <div class="alignCheckbox">  <input type="checkbox"> <div> Panaji</div></div> 
+         <div class="alignCheckbox">  <input type="checkbox"> <div>Arpora </div></div>
+         <div class="alignCheckbox">   <input type="checkbox"> <div>Condolim </div></div>
+
+
+         </div>
+         <div>
+            <h3>Property class</h3>
+
+            <div id="star">
+                <div>1<i class="fa-solid fa-star"></i></div>
+                <div>2<i class="fa-solid fa-star"></i></div>
+                <div>3<i class="fa-solid fa-star"></i></div>
+                <div>4<i class="fa-solid fa-star"></i></div>
+                <div>5<i class="fa-solid fa-star"></i></div>
+            </div>
+            <!-- <input type="checkbox">LGBTQ welcoming
+            See properties that pledge to make all guests feel safe, welcome and respected.
+            <input type="checkbox">Business-friendly
+            See properties with amenities to help you work comfortably, like WiFi and breakfast.
+            <input type="checkbox">Family-friendly
+            See properties that include family essentials like in-room conveniences and activities for the kids. -->
+         </div>
+    </div>
+   
+    <div id="main">
+        <!-- <div>
+            <img src="https://images.trvl-media.com/hotels/20000000/19220000/19218500/19218418/8be2ba2b.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="error">
+            <div>
+                <h1 class="name">Le Meridien Goa, Calangute</h1>
+                <p>Calangute</p>
+                <p>services</p>
+                <h3>fully refundable</h3>
+                <h4> 4.4/5 </h4>
+                <h4>compliment</h4>
+            </div>
+            <div>
+                <button>we have left</button>
+                <h2>price</h2>
+            </div>
+        </div> -->
+    </div>
+    <div id="addvert">
+        <img src="https://tpc.googlesyndication.com/simgad/611061976946598058?" alt="error">
+        <img src="https://tpc.googlesyndication.com/simgad/17447823249981941085?" alt="error">
+    </div>
+</body>
+</html>
+
+<script>
+    var Data=[
+        {
+            image:"https://images.trvl-media.com/hotels/3000000/2520000/2516300/2516280/36d90ef2.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Novotel Goa Dona Sylvia Hotel",
+            place:"Cavelossim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable",
+            rating:4.3,
+            price:6800,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/440000/438400/438378/bdbe16ac.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"The Leela Goa ",
+            place:"Cavelossim",
+            services:"pool",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.7,
+            price:29000,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/670000/663700/663615/08a8dd9d.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Taj Exotic Resort & Spa, Goa",
+            place:"Benaulim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.7,
+            price:23000,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/5000000/4480000/4474800/4474764/2e15d580.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Radisson Blu Resort Goa Cavelossim Beach",
+            place:"Cavelossim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.1,
+            price:8505,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/80000/70600/70518/dce1b7a5.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Bogmallo Beach Resort",
+            place:"Bogmallo",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:3.6,
+            price:7500,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/930000/921600/921574/623993db.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"The LaLiT Golf & Spa Resort Goa",
+            place:"Palolem",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable",
+            rating:3.8,
+            price:10798,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/1000000/530000/526400/526340/f5764d77.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Taj Fort Aguada Resort & Spa, Goa",
+            place:"Aguada Fort Area",
+            services:"Breakfast Included + Spa + Air conditioned",
+            payserv:"Fully refundable",
+            rating:4.5,
+            price:20500,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/11000000/10550000/10547600/10547516/b5c4d061.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Planet Hollywood Goa Beach Resort",
+            place:"Uttorda",
+            services:"Free WiFi + Hot Tub + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.2,
+            price:9000,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/25000000/24050000/24041500/24041444/e8849892.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Azaya Beach Resort",
+            place:"Benaulim",
+            services:"Free WiFi + Spa + Air conditioned",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4,
+            price:17500,
+        },
+        {
+            image:"https://images.trvl-media.com/hotels/78000000/77160000/77152400/77152397/fe050728.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            name:"Sea Breeze Max Resort & Spa",
+            place:"Fatrade",
+            services:"Free WiFi + Pool",
+            payserv:"Fully refundable, Reserve now, pay later",
+            rating:4.3,
+            price:3500,
+        },
+    ] 
+    
+
+    displayData(Data);
+ 
+    function displayData(Data){
+        document.querySelector("#main").innerHTML="";
+        Data.forEach(function(ele){
+        var box=document.createElement("div");
+            var image=document.createElement("img");
+                image.setAttribute("src",ele.image);
+            var div1=document.createElement("div");
+              var name=document.createElement("h1");
+                  name.innerText=ele.name;
+              var place=document.createElement("p");
+                  place.innerText=ele.place;
+              let activity=document.createElement("span");
+                          activity.innerHTML=`<i class="fa-solid fa-person-swimming"></i>`
+
+              let activityName=document.createElement("span");
+                         activityName.innerText="Pool"
+
+              let breakfasticon=document.createElement("span");
+                    breakfasticon.innerHTML= `<i class="fa-solid fa-mug-saucer"></i>`
+      
+              let breakfast=document.createElement("span");
+                           breakfast.innerText="Breakfast"
+
+              var payserv=document.createElement("h3");
+                  payserv.innerText=ele.payserv;
+            
+              var rate=document.createElement("h4");
+                  rate.innerText=ele.rating+"/5";
+              var comp=document.createElement("h4");
+                  if(Number(ele.rating)>=Number(4.5))
+                      {comp.innerText="Exceptional"
+                      comp.style.color="rgb(25,101,31)"}
+                  else if(Number(ele.rating)>=Number(4.3))
+                      {comp.innerText="Wonderful"
+                       comp.style.color="#202976 "}
+                   else if(Number(ele.rating)>=Number(4))
+                       {comp.innerText="Very Good"
+                       comp.style.color="rgb(234,147,44)"}
+                    else if(Number(ele.rating)<Number(4))
+                       {comp.innerText="Good"
+                         comp.style.color="rgb(244,114,59)"}      
+            var div2=document.createElement("div");
+               var btn=document.createElement("button");
+                   btn.innerText="only few left"
+                   btn.style.fontSize="14px"
+               var price=document.createElement("h2");             
+                   price.innerText="Rs "+Number(ele.price);
+                   
+          div1.append(name,place,activity,activityName,breakfasticon,breakfast,payserv,rate,comp);
+          div2.append(btn,price);
+          box.append(image,div1,div2);
+          document.querySelector("#main").append(box);
+        });
+}
+
+
+function rearrange(){
+    let inputData=Data;
+    let val=document.querySelector("#priceValue").value;
+       
+     if(val=="low"){
+        inputData.sort(function(a,b){
+        return a.price-b.price
+       })
+    displayData(inputData)
+     }
+
+     else if(val=="high"){
+        inputData.sort(function(a,b){
+            return b.price-a.price
+        })
+       displayData(inputData)
+     }
+
+     else if(val=="rating"){
+        inputData.sort(function(a,b){
+            return b.rating-a.rating
+        })
+       displayData(inputData)
+     }
+     
+}
+
+</script>
