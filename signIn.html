@@ -157,21 +157,24 @@
   //function to check credentials
   function checkCredentials() {
     event.preventDefault();
-
-    let signInEmail = formTag.email.value;
-    let SignInPassword = formTag.password.value;
+    
+    let signInData = {
+      signInEmail = formTag.email.value;
+      signInPassword = formTag.password.value;
+    }
     let flag = false;
 
     userArrFromLS.forEach(function (elem) {
       if (
-        signInEmail === elem.signUpEmail &&
-        SignInPassword === elem.signUpPassword
+        signInData.signInEmail === elem.signUpEmail &&
+        signInData.signInPassword === elem.signUpPassword
       ) {
         flag = true;
       }
     });
     if (flag) {
       alert("Signed in successfully.");
+      localStorage.signInData("signInObj", JSON.stringify(signInData));
     } else {
       alert("Wrong credentials.");
     }
