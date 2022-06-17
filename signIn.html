@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- script file of font awesome -->
     <script src="https://kit.fontawesome.com/63c7c4276d.js" crossorigin="anonymous"></script>
+
     <title>Sign in</title>
     <style>
       * {
@@ -116,6 +119,7 @@
         alt=""
       />
     </div>
+
     <div id="formContainer">
       <form>
         <div>
@@ -176,7 +180,7 @@
     if (userObj !== false) {
       localStorage.setItem("signInObj", JSON.stringify(userObj));
       alert("Signed in successfully.");
-      // wondow.location.href = "index.html";
+      // window.location.href = "index.html";
     } else {
       alert("Wrong credentials.");
     }
