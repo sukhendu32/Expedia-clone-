@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6a4368f5b1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27" alt="">
+        </div>
+        <div id=username>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"
+                width="512" height="512">
+                <g>
+                    <circle cx="256" cy="128" r="128" />
+                    <path
+                        d="M256,298.667c-105.99,0.118-191.882,86.01-192,192C64,502.449,73.551,512,85.333,512h341.333   c11.782,0,21.333-9.551,21.333-21.333C447.882,384.677,361.99,298.784,256,298.667z" />
+                </g>
+            </svg>
+            <div id="personName">Hello, Manjunath</div>
+        </div>
+    </div>
+    <div id="header">
+        <h1>Review and book</h1>
+    </div>
+    <div id="covidwarning">
+        <div>
+            <div>
+                <svg id="Layer_1" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"
+                    data-name="Layer 1">
+                    <path
+                        d="m18.581 2.14-6.265-2.089a1 1 0 0 0 -.632 0l-6.266 2.089a4.993 4.993 0 0 0 -3.418 4.743v5.117c0 7.563 9.2 11.74 9.594 11.914a1 1 0 0 0 .812 0c.394-.174 9.594-4.351 9.594-11.914v-5.117a4.993 4.993 0 0 0 -3.419-4.743zm-6.581 16.86a1 1 0 1 1 1-1 1 1 0 0 1 -1 1zm1-5a1 1 0 0 1 -2 0v-8a1 1 0 0 1 2 0z" />
+                </svg>
+                <p>Check COVID-19 retrictions</p>
+            </div>
+            <div>
+                <p id="removecovid">x</p>
+            </div>
+        </div>
+        <div>
+            <p>Find out more <i class="fa-solid fa-clone"></i></p>
+        </div>
+    </div>
+    <div id="freeCancel">
+        <div>
+            <img src="https://a.travel-assets.com/travel-assets-manager/03052020/illustration__free__cancellation__sml.svg"
+                alt="">
+        </div>
+        <div>
+            <p>Free cancellation before <strong>2 days</strong>to checkin.</p>
+            <p>You can change or cancel this stay for a full refund if plans change. Because flexibility matters.</p>
+        </div>
+    </div>
+    <div id="rating">
+        <i class="fa-solid fa-check"></i>
+        <p>You have picked winner! This hotel is rated 4.2/5</p>
+    </div>
+    <div id="body">
+        <div id="leftbody">
+            <div id="checkLogin">
+                <div id="loginvalidation">
+                </div>
+            </div>
+            <div id="userinfo">
+                <div id="personIcon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div id="userInput">
+                    <form>
+                        <label for="">Room 1:</label>
+                        <label for="">2 Adults, 1 King Bed, Non-smoking</label><br />
+                        <p><i class="fa-solid fa-check"></i>Free parking</p>
+                        <label class="required" for="">Traveller name</label><br />
+                        <select name="" id="tName">
+                            <option value="">Select Traveller</option>
+                            <option value="Add new traveller">Add new traveller</option>
+                            <option value="Me">Me</option>
+                        </select>
+                        <div id="firstNameAndLastName">
+                            <div id="firstName">
+                                <label class="required" for="">First name</label><br />
+                                <input id="firstNameInput" type="text" placeholder="(e.g.masai)" required>
+                            </div>
+                            <div id="lastName">
+                                <label class="required" for="">last name</label><br />
+                                <input id="lastNameInput" type="text" placeholder="(e.g.school)" required>
+                            </div>
+                        </div>
+                        <label class="required" for="">Mobile phone number</label><br />
+                        <label id="countryCode" for="">IND +91 <i class="fa-solid fa-angle-down"></i></label>
+                        <input type="number" id="phoneNumber" placeholder="So the property can reach you"
+                            required><br />
+                        <input type="checkbox">
+                        <label class="checkbox-label" for="">Recive text alert about this trip(free of
+                            charge)</label><br />
+                        <p>Special Requests(Optional)</p>
+                    </form>
+                </div>
+            </div>
+            <div id="paymentDetails">
+                <div id="paymentIcon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div id="paymentData">
+                    <div class="paymentSafety">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <p>We use secure transmission</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <p>We protect your personal information</p>
+                        </div>
+                    </div>
+                    <div id="choicePayment">
+                        <div>Debit/Credit Card</div>
+                        <div>Netbanking</div>
+                    </div>
+                    <div id="cardPayment">
+                        <div>
+                            <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_master_card.svg" alt="">
+                        </div>
+                        <div>
+                            <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_american_express.svg"
+                                alt="">
+                        </div>
+                        <div>
+                            <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_visa.svg" alt="">
+                        </div>
+                        <div>
+                            <img src="https://a.travel-assets.com/dms-svg/payments/cards-cc_visa_electron.svg" alt="">
+                        </div>
+                    </div>
+                    <form>
+                        <label class="requiredPaymentType" for="">Name on Card</label><br />
+                        <input id="cardName" class="cardData" type="text" required><br />
+                        <label class="requiredPaymentType" for="">Debit/Credit card number</label><br />
+                        <input id="cardNum" class="cardData" type="number" required><br />
+                        <label class="requiredPaymentType" for="">Expiry date</label><br />
+                        <select id="expMonth" class="expDate">
+                            <option value="">Month</option>
+                            <option value="01 Jan">01 Jan</option>
+                        </select>
+                        <select id="expYear" class="expDate">
+                            <option value="">Year</option>
+                            <option value="2035">2035</option>
+                        </select><br />
+                        <label class="requiredPaymentType" for="">Security code</label><br />
+                        <input id="cvv" class="cardData" type="number"><br />
+                        <label class="requiredPaymentType" for="">Billing country/territory</label><br />
+                        <select class="billingCountry">
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Norway">Norway</option>
+                        </select><br />
+                        <label class="requiredPaymentType" for="">PAN</label><br />
+                        <input required id="panNum" class="cardData"><br />
+                        <input type="checkbox">
+                        <label for="">Remember this card for future use</label>
+                    </form>
+                </div>
+            </div>
+            <div id="bookingInfo">
+                <h2>Important information about your booking</h2>
+                <div class="scroll">
+                    <ul>
+                        <li>Cancellations or changes made after 11:59 (property local time) on 26 Jun 2022 or no-shows
+                            are subject to a property fee equal to 100% of the total amount paid for the reservation
+                        </li>
+                        <li>Front desk staff will greet guests on arrival.</li>
+                        <li>Please note that BEX Travel Asia Pte Ltd and the hotel will not issue a tax invoice. You
+                            will receive a commercial receipt for the purpose of the transaction.</li>
+                        <li>
+                            <p>You'll be asked to pay the following charges at the property:</p>
+                            <ul id="padUl">
+                                <li>New Year's Eve (31 December) Gala Dinner per adult: INR 30000</li>
+                                <li>New Year's Eve (31 December) Gala Dinner per child: INR 30000 (from 7 to 12 years
+                                    old)</li>
+                            </ul>
+                        </li>
+                        <p>We have included all charges provided to us by the property</p>
+
+
+                    </ul>
+                </div>
+                <div id="moreLinks">By clicking on the button below, I acknowledge that I have reviewed the
+                    <a href="">Privacy Statement
+                        <i class="fa-solid fa-clone"></i>
+                    </a>
+                    and
+                    <a href="">Government Travel Advice
+                        <i class="fa-solid fa-clone"></i>
+                    </a>
+                    and have reviewed and accept the
+                    <a href="">Rules & Restrictions</a>
+                    and
+                    <a href="">Trems Of Use
+                        <i class="fa-solid fa-clone"></i>
+                    </a>
+                </div>
+                <span class="changePlan">
+                    <i class="fa-solid fa-check"></i>
+                    Change of plans? No problem. You can
+                    <strong>cancel for free</strong>
+                    before
+                    <a href="">Sun, 26 Jun</a>
+                </span><br />
+                <button id="completeBooking">complete booking <i class="fa-solid fa-angle-right"></i></button>
+                <div id="thankYou">
+                    <div class="popup" id="popup">
+                        <img src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                        <h2>Thank You!</h2>
+                        <p class="lead">You have successfully booked room</p>
+                        <button class="btn" id="closePopup">OK</button>
+                    </div>
+                </div>
+                
+
+                <div id="extraInfo">
+                    <div>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div>
+                        <p>We use secure transmission and encrypted storage to protect your personal information.</p>
+                        <p>This payment will be processed in India. This does not apply when the travel provider
+                            (airline/hotel/rail, etc.) processes your payment.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="rightbody">
+            <div id="hotelDetails">
+                <div id="hotelImage">
+                    <img src="https://images.trvl-media.com/hotels/70000000/69560000/69551900/69551801/dd25faec_l.jpg"
+                        alt="">
+                    <h3 id="hotelImage_hotelName">Fairfield by Marriott Goa Benaulim</h3>
+                </div>
+                <div class="bookingSummary">
+                    <span><strong>4.2/5</strong> Wonderful (14 reviews)</span> <br />
+                    <span>Guest rated this property 4.9/5 for cleanliness</span><br />
+                    <div class="roomSummary">
+                        <span class="roomcount"><strong>1 Room:</strong></span>
+                        <span class="roomDescription">Deluxe Room, 1 Queen Bed, Non Smoking, Balcony</span>
+                    </div>
+                    <div class="duration">
+                        <div class="durationCheckin">
+                            <span><strong>Check-in:</strong></span>
+                            <span>Wed, 29 Jun</span>
+                        </div>
+                        <div class="durationCheckout">
+                            <span><strong>Check-out:</strong></span>
+                            <span>Thu, 30 Jun</span>
+                        </div>
+                        <span class="nightCount">1</span>
+                        <span>-night stay</span>
+                    </div>
+
+
+                </div>
+            </div>
+            <div id="priceDetails">
+                <h1>Price details</h1>
+                <hr>
+                <div id="priceSummary">
+                    <div class="roomPrice">
+                        <div>
+                            <span id="priceSummary_roomCount">1</span>
+                            room x
+                            <span id="priceSummary_nightCount">1</span>
+                            night
+                        </div>
+                        <div>
+                            <span>Rs</span>
+                            <span id="roomPrice_withoutTax">6700.00</span>
+                        </div>
+                    </div>
+                    <div class="taxes">
+                        <div>
+                            <span>Taxes and service fees</span>
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div>
+                            <span>Rs</span>
+                            <span id="gstTax">821.00</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="finalTotal">
+                        <div>
+                            <span>Total</span>
+                        </div>
+                        <div>
+                            <span>Rs</span>
+                            <span id="totalAmount">7670.00</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>Not included in your total</div>
+                    <span class="mandatoryCharge">Mnadatory charge: collected at property <span
+                            style="color: blue;">Details</span> </span>
+                    <div class="promoCode">
+                        <input class="promo" id="PromoInput" placeholder="enter promo code">
+                        <button class="promo" id="applypromoButton">Apply</button>
+                    </div>
+                    <div class="hotelRateInformation">
+                        Taxes and Fees due at the property are based on current exchange reates, and are payable in
+                        local currency. Trip total includes GST that Expedia pays to its vendors (e.g.Hotels). We retain
+                        our sevice fee for facilitating your travel reservatin. For details please see our terms of use.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p id="feedback"> <strong>[+]</strong> Tell us what you think <i class="fa-solid fa-clone"></i></p>
+        <div class="policy">
+            <span>Privacy Policy <i class="fa-solid fa-clone"></i> </span>
+            <span>Terms of Use <i class="fa-solid fa-clone"></i></span><br />
+            <p><i class="fa-regular fa-copyright"></i>2022Expedia, Inc, an Expedia Group Company / Expedia Asia Holdings
+                Mauritius / BEX Travel Asia Pte Ltd. All rights reserved.</p>
+        </div>
+        <div id="footerImg">
+            <img src="https://images.trvl-media.com/media/content/expind/images/sg/secure.png" alt="">
+            <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
+                alt="">
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+
+<script src="payment.js"></script>
