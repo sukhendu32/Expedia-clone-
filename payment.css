@@ -1,0 +1,772 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ededed;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 0px;
+}
+
+#navbar>#logo {
+    margin-left: 260px;
+    display: flex;
+    align-items: center;
+
+}
+
+#navbar>#username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar>#username>svg {
+    width: 10%;
+    height: 40%;
+    margin-right: -7px;
+}
+
+#header {
+    width: 70%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 10px 0px;
+}
+
+#header>h1 {
+    font-size: 25px;
+    line-height: 33.75px;
+    font-weight: 700;
+    color: #202843;
+    line-height: 33.75px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#covidwarning {
+
+    border-left: 2px solid #7a5505;
+    border-left: 3px solid #7a5505;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 15px 0px;
+    background-color: #f0dcb4;
+
+}
+
+#covidwarning>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#covidwarning>div>div:first-child {
+    display: flex;
+
+}
+
+#covidwarning>div>div>svg {
+    padding: 0px;
+    width: 30%;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: -5px;
+}
+
+#covidwarning>div>div:first-child>p {
+    width: 300px;
+    margin-left: -15px;
+    color: #7a5505;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#covidwarning>div:nth-child(2) {
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    margin-left: 70px;
+    margin-top: 7px;
+    color: #7a5505;
+
+}
+
+#covidwarning>div:nth-child(2)>p {
+    text-decoration: underline;
+}
+
+#removecovid {
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7a5505;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#freeCancel {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    background-color: white;
+    margin-top: 15px;
+    padding: 20px 0px 10px 20px;
+}
+
+#freeCancel>div:first-child {
+    margin-right: 15px;
+}
+
+#freeCancel>div:last-child>p:first-child {
+    color: rgb(31, 31, 31)x;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#freeCancel>div:last-child>p:last-child {
+    color: rgb(97, 97, 97);
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+}
+
+#rating {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.fa-check {
+    color: #2f7000;
+    font-size: 15px;
+    line-height: 21.1765px;
+    margin-right: 10px;
+
+}
+
+#rating>p {
+    color: #2f7000;
+    font-size: 15px;
+    line-height: 21.1765px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#body {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+#body>#leftbody {
+    width: 65%;
+    margin-right: 15px;
+}
+
+#body>#rightbody {
+    width: 34%;
+}
+
+#userinfo {
+    display: flex;
+    background-color: white;
+}
+
+#personIcon {
+    width: 10%;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#personIcon>i {
+    font-size: 25px;
+
+}
+
+#userInput {
+    width: 90%;
+}
+
+#userInput>form {
+    width: 100%;
+    padding-top: 20px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    line-height: 24px;
+}
+
+#userInput>form>label:first-child {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#userInput>form>p:nth-child(4) {
+    font-size: 15px;
+    color: #2f7000;
+    margin-top: 7px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    margin-bottom: 5px;
+}
+
+#userInput .required:after {
+    content: "*";
+    color: #2f7000;
+}
+
+#userInput .required {
+    color: #616161;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-weight: 700;
+    line-height: 18.2px;
+}
+
+#firstNameAndLastName {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#userInput #tName {
+    padding: 6px 30px 6px 12px;
+    color: #0065b8;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    margin-bottom: 9px;
+}
+
+#firstNameAndLastName>div:first-child {
+    margin-right: 30px;
+}
+
+#firstNameAndLastName>div>input {
+    padding: 8px 12px;
+}
+
+#userInput>form #countryCode {
+    border: 1px solid grey;
+    padding: 7px 30px 7px 12px;
+    background-color: rgb(245, 245, 245);
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#userInput>form #countryCode+input {
+    padding: 7px 12px;
+    font-size: 15px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    margin-bottom: 7px;
+}
+
+#userInput>form .checkbox-label {
+    font-size: 15px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#userInput>form>p:last-child {
+    font-size: 13px;
+    margin-top: 15px;
+    font-weight: 18.85px;
+    margin-bottom: 50px;
+    color: #0087f5;
+    text-decoration: underline;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#paymentDetails {
+    display: flex;
+    background-color: white;
+    margin-top: 10px;
+}
+
+#paymentIcon {
+    width: 10%;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#paymentIcon>i {
+    font-size: 25px;
+}
+
+#paymentData {
+    width: 90%;
+}
+
+#paymentData .paymentSafety {
+    display: flex;
+    padding-top: 20px;
+    color: #2f7000;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    align-items: center;
+}
+
+#paymentData .paymentSafety>div:first-child {
+    margin-right: 30px;
+}
+
+#paymentData .paymentSafety>div {
+    display: flex;
+}
+
+#paymentData .paymentSafety>div>p {
+    padding-top: 3px;
+}
+
+#choicePayment {
+    display: flex;
+    width: 95%;
+    margin-top: 15px;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    box-shadow: grey 0px 1px 0px;
+}
+
+#choicePayment>div:first-child {
+    padding: 6px;
+    background-color: #f5f5f5;
+}
+
+#choicePayment>div:last-child {
+    padding: 6px;
+}
+
+#cardPayment {
+    display: flex;
+    margin-top: 15px;
+}
+
+#cardPayment>div {
+    width: 40px;
+    margin-bottom: 15px;
+}
+
+#cardPayment>div>img {
+    width: 100%;
+}
+
+#paymentDetails form {
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+#paymentDetails form .requiredPaymentType {
+    color: #616161;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-weight: 700;
+    line-height: 18.2px;
+}
+
+#paymentDetails form .requiredPaymentType:after {
+    content: "*";
+    color: #2f7000;
+}
+
+#paymentDetails form .cardData {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+#paymentDetails form #cardName {
+    width: 400px;
+    margin-bottom: 13px;
+
+}
+
+#paymentDetails form #cardNum {
+    width: 250px;
+    margin-bottom: 13px;
+}
+
+#paymentDetails form .expDate {
+    padding: 6px 30px 6px 12px;
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 15px;
+}
+
+#paymentDetails form #cvv {
+    width: 80px;
+    margin-bottom: 13px;
+}
+
+#paymentDetails form .billingCountry {
+    padding: 6px 30px 6px 12px;
+    background-color: rgb(245, 245, 245);
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-bottom: 13px;
+}
+
+#paymentDetails form #panNum {
+    width: 230px;
+    margin-bottom: 13px;
+}
+
+#paymentDetails form>label:last-child {
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #3e3e3e;
+}
+
+#bookingInfo {
+    background-color: white;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+#bookingInfo>h2 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 19.5652px;
+}
+
+#bookingInfo>.scroll {
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    line-height: 24px;
+    width: 100%;
+    height: 190px;
+    color: #616161;
+    overflow-y: scroll;
+}
+
+#bookingInfo>.scroll>ul {
+    padding-left: 20px;
+}
+
+#bookingInfo>.scroll>ul>li {
+    padding: 0px 0px 6px;
+}
+
+#bookingInfo>.scroll #padUl {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#moreLinks {
+    margin-top: 15px;
+    padding: 10px;
+    color: #616161;
+    font-size: 13px;
+    line-height: 18.3529px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#moreLinks>a {
+    text-decoration: none;
+}
+
+#moreLinks>a>i {
+    font-size: 10px;
+}
+
+#bookingInfo .changePlan {
+    color: #2f7000;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#bookingInfo #completeBooking {
+    background-color: #ffc94c;
+    margin: 18px 12px 0px 0px;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    color: #3d3100;
+    border: transparent;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#bookingInfo #extraInfo {
+    margin-top: 20px;
+    display: flex;
+    line-height: 18.3529px;
+    color: rgb(97, 97, 97);
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#bookingInfo #extraInfo>div:first-child {
+    margin-right: 10px;
+}
+
+#bookingInfo #extraInfo>div:last-child>p {
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+#footer #feedback {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: #0087f5;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#footer .policy {
+    width: 32%;
+    line-height: 24px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #616161;
+    font-weight: 400;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#footer .policy>span:first-child {
+    margin-right: 30px;
+}
+
+#footerImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#footerImg>img {
+    margin-bottom: 15px;
+}
+
+#hotelDetails {
+    background-color: white;
+}
+
+#hotelDetails #hotelImage {
+    border: 1px solid red;
+    position: relative;
+    height: 200px;
+}
+
+#hotelDetails #hotelImage>img {
+    width: 100%;
+    height: 200px;
+    filter: brightness(50%);
+}
+
+#hotelDetails #hotelImage>h3 {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20.25px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#hotelDetails .bookingSummary {
+    color: rgb(97, 97, 97);
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    line-height: 21.1765px;
+    padding: 13px;
+    margin-top: 5px;
+}
+
+#hotelDetails .bookingSummary>span:first-child {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+#hotelDetails .bookingSummary>span:first-child strong {
+    color: black;
+}
+
+#hotelDetails .bookingSummary .roomSummary {
+    margin-top: 15px;
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+#priceDetails {
+    background-color: white;
+    margin-top: 10px;
+}
+
+#priceDetails>h1:first-child {
+    padding: 15px 0px 15px 15px;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+#priceDetails>hr {
+    width: 100%;
+}
+
+#priceSummary {
+    padding: 13px;
+}
+
+#priceSummary .roomPrice {
+    display: flex;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-size: 15px;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#priceSummary .taxes {
+    display: flex;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-size: 15px;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#priceSummary #finalTotal{
+    display: flex;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-size: 17px;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+#priceSummary>div:nth-child(6){
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+#priceSummary .mandatoryCharge{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(97, 97, 97);
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+#priceSummary .promoCode {
+   margin-top: 25px;
+}
+#priceSummary .promo {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid grey;
+ }
+ #priceSummary .hotelRateInformation{
+    margin-top: 15px;
+    font-size: 11.47px;
+    line-height: 16px;
+    color: rgb(97, 97, 97);
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+ }
+ #loginvalidation{
+    background-color: white;
+    display: flex;
+    margin-bottom: 10px;
+ }
+ #loginvalidation #lockIcon{
+    width: 9%;
+    padding-left: 20px;
+    padding-top: 15px;
+ }
+ #loginvalidation #lockIcon>i{
+    font-size: 20px;
+ }
+ #loginvalidation #signedIn{
+    padding: 10px;
+ }
+ #loginvalidation #signedIn>div:first-child{
+    color: rgb(97, 97, 97);
+    font-size:13px ;
+    font-weight:700 ;
+    line-height:18.35px ;
+    font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif ;
+ }
+ #loginvalidation #signedIn>div:nth-child(2){
+    font-size:17px ;
+    font-weight:400 ;
+    line-height:24px ;
+    margin-bottom: 10px;
+    font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif ;
+ }
+ #loginvalidation #signedIn>div:nth-child(3){
+    font-size:13px ;
+    color: #2f7000;
+    font-weight:400 ;
+    line-height:18px ;
+    font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif ;
+ }
+ #loginvalidation #signedOut>div{
+    font-size:17px ;
+    color: rgb(0, 135, 245);
+    font-weight:700 ;
+    padding: 10px;
+    padding-top: 15px;
+    text-decoration: underline;
+    line-height:24px ;
+    font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif ;
+ }
+ #thankYou{
+    position: relative;
+ }
+ .popup{
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    border-radius: 6px;
+    position: absolute;
+    top: -25px;
+    left: 132%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0px 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s;
+ }
+ .open-popup{
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+ }
+ .popup img{
+    width: 30%;
+    filter: brightness(50%);
+    margin-top: 10%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.popup h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 30px 0px 10px;
+    color: white;
+    font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif ;
+}
+.popup button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0px;
+    background-color: #c2e71d;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 17px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif ;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.popup p{
+    font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif ;
+    color: white;
+}
