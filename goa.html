@@ -15,47 +15,124 @@
         body{
             background-color: #f8f5f4;
         }
+         
+  
+        .buttonStyle {
+            background-color: #3662D8;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
 
-     /* navbar */
+        a {
+            text-decoration: none;
+        }
 
-        #navbar{
-          
-            width: 98%; 
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            height: 80px;
-           margin-top: -10px;
-            background-color: white;
-            padding: 0px 60px;
-            margin-bottom: 20px;
+        a:hover {
+            color: #3662D8;
+        }
+
+        .container {
+            width: 90%;
             display: flex;
-            justify-content:space-between;
             align-items: center;
         }
-        #navbar>div>img{
-          
-            margin-right: 40px;
-        }
-        #navbar>div>select{
-            width: 150px;
-           margin-bottom: 8px;
-            font-size: 16px;
-            border: 0px;
-            color: rgb(66, 64, 64);
+
+        #upperNav {
+            background-color: #343B53;
+            color: #fff;
+            padding: 15px;
+            font-size: 14px;
+            text-decoration: none;
         }
 
-        #navbar>div+div{
-          
-            color: rgb(67, 65, 65);
-            width: 40%;
-            font-size: 17px;
+        #upperNav a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        #upperNav a:hover {
+            color: #3662D8;
+        }
+
+
+        nav {
+            
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            width: 100%;
+            font-size: 14px;
+            text-decoration: none;
             display: flex;
-            justify-content: space-evenly;
-        }
-        
-        #navbar>div+div>h4:hover{
-            color: rgb(96, 96, 245);
+            justify-content: space-between;
+            margin-top: 10px;
+            border-bottom: 1px solid #a7a7a7c9;
+            padding-bottom: 10px;
         }
 
+        nav>.container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            padding: 10px;
+        }
+
+        nav>.container>div:first-child {
+            display: flex;
+            align-items: center;
+        }
+
+        nav>.container>div:first-child>img {
+            margin-right: 10px;
+        }
+
+        nav>.container>div:first-child>p {
+            font-weight: 600;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        nav>.container>div:last-child>a {
+            color: #000000;
+            margin-right: 25px;
+            font-weight: 600;
+            letter-spacing: .4px;
+        }
+
+        nav>.container>div:last-child>a:hover {
+            color: #3662D8;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        nav>.container>div:last-child>a>i {
+            margin-right: 8px;
+        }
+
+
+
+
+     /* navbar */
+/*
 
        /* search and date bar */
 
@@ -149,6 +226,7 @@
 
         #sortopt{
             margin: auto;
+            margin-bottom: 0px;
             width: 60%;
             height: 50px;
             display: flex;
@@ -248,15 +326,15 @@
   
 
         #main{
-            margin-top: -900px;
+            margin-top: -920px;           
         }
         #leftbox>div>input{
             display: block;
         }
         #main>div{
             width: 60%;
-            height: 275px;
-            background-color: white;
+            height: 225px;
+            background-color: white; 
             border-radius: 15px;
             display: flex;           
             margin: auto;
@@ -311,7 +389,7 @@
         #addvert{            
             
             margin-left: 85%;
-            margin-top: -2950px;
+            margin-top: -2880px;
         }
         span{
             padding-left: 6px;
@@ -487,15 +565,37 @@
 
         a{
             /* border: 1px solid red; */
-            font-size: 40px;
+            /* font-size: 40px;
             margin-bottom: 10px;
-            margin-right: 40px;
+            margin-right: 40px; */
         }    
  
     </style> 
 </head>
 <body>
-    <div id="navbar">
+
+       <!-- navbar -->
+    <nav>
+        <div class="container">
+            <div>
+                <img src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1&2" alt="logo">
+                <p>More travel </p>
+            </div>
+            <div>
+                <a href="#"><i class="fa-solid fa-globe"></i> English</a>
+                <a href="#">List your property</a>
+                <a href="#">Support</a>
+                <a href="#">Trips</a>
+                <a id="localSignIn" href="signIn.html">Sign In</a>
+                <a id="localSignUp" href="signUp.html">Sign Up</a>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <!-- <div id="navbar">
         <div>
             <img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" alt="error">
     
@@ -514,7 +614,7 @@
             <h4><i class="fa-solid fa-bell"></i></h4>
             <h4>Sign in</h4>
         </div>
-    </div>
+    </div> -->
 
     <div id="date">
         
@@ -828,7 +928,10 @@
         box.addEventListener("click",hotel)
 
         function hotel(){
-            window.location.href=ele.link;
+            if(ele.link!=undefined){
+                window.location.href=ele.link;
+            }
+            
         }
         
 
@@ -925,6 +1028,7 @@ function rearrange(){
 
 
 let store=JSON.parse(localStorage.getItem("signInObj"));
+
 
 if(store!=null){
 
