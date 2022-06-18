@@ -1,58 +1,39 @@
-let paymentData = {
-    img: "https://images.trvl-media.com/hotels/70000000/69560000/69551900/69551801/c8b7c58e.jpg?impolicy=resizecrop&rw=297&ra=fit",
-    hotelName: "ITC Grand Goa, a Luxury Collection Resort & Spa, Goa",
-    roomType: "deluxe room 2 single beds",
-    numNights: 2,
-    priceForOneNight: 7000,
-}
-localStorage.setItem("hotelData", JSON.stringify(paymentData));
-
-let signIn = {
-    email: "btcpatil@gamil.com",
-}
-localStorage.setItem("signIn", JSON.stringify(signIn));
 
 
-let signUp = {
-    firstName: "ramesh",
-    lastName: "Patil"
-}
-localStorage.setItem("signUp", JSON.stringify(signUp));
-
-
-
-
-
-let priceInput = JSON.parse(localStorage.getItem("hotelData"));
 
 document.getElementById("removecovid").addEventListener("click", function (event) {
     event.path[3].remove();
 })
 
-document.getElementById("hotelImage_hotelName").innerText = priceInput.hotelName;
+let hotelPrice = localStorage.getItem("totalExpense");
+let hotelTax = localStorage.getItem("totalTax");
 
-document.getElementById("priceSummary_nightCount").innerText = priceInput.numNights;
+
+
+document.getElementById("priceSummary_nightCount").innerText = localStorage.getItem("noOfDays");
 
 let roomPrice = document.getElementById("roomPrice_withoutTax");
-let priceCal = priceInput.numNights * priceInput.priceForOneNight;
-roomPrice.innerText = priceCal;
 
-let tax = document.getElementById("gstTax").innerText;
+roomPrice.innerText = Number(hotelPrice)-Number(hotelTax);
+
+let tax = document.getElementById("gstTax");
+tax.innerText=Number(hotelTax);
 
 let totalPrice = document.getElementById("totalAmount");
-totalPrice.innerText = Number(priceCal) + Number(tax);
+totalPrice.innerText =Number(hotelPrice);
 
 
 document.getElementById("applypromoButton").addEventListener("click", function () {
     let promo = document.getElementById("PromoInput").value;
-    if (promo === "SUMMER") {
-        totalPrice.innerText = (Number(priceCal) + Number(tax) * 0.7);
+    if (promo === "SUMMER30") {
+        totalPrice.innerText = (Number(hotelPrice)* 0.7);
     } else {
         alert("Invalid promo code")
     }
 })
 
-let checkSignin = JSON.parse(localStorage.getItem("signIn"));
+let checkSignin = JSON.parse(localStorage.getItem("signInObj"));
+
 
 if (checkSignin == null) {
     document.getElementById("personName").innerHTML = "Signin";
@@ -74,14 +55,14 @@ if (checkSignin == null) {
 
 } else {
     let navName = document.getElementById("personName");
-    let signupData = JSON.parse(localStorage.getItem("signUp"));
-    navName.innerHTML = "Hello, " + signupData.firstName;
+    let signin = JSON.parse(localStorage.getItem("signInObj"));
+    navName.innerHTML = "Hello, " + signin.signUpFirstName;
 
     let name = document.getElementById("firstNameInput");
-    name.value = signupData.firstName;
+    name.value = signin.signUpFirstName;
 
     let surname = document.getElementById("lastNameInput");
-    surname.value = signupData.lastName;
+    surname.value = signin.signUpSurname;
 
     let iconDiv = document.createElement("div");
     iconDiv.setAttribute("id", "lockIcon");
@@ -96,7 +77,7 @@ if (checkSignin == null) {
 
     let checkSignin = JSON.parse(localStorage.getItem("signIn"));
     let mailDiv = document.createElement("div");
-    mailDiv.innerText = checkSignin.email;
+    mailDiv.innerText = signin.signUpEmail;
 
     let expDiv = document.createElement("div");
     expDiv.innerText = "You will earn 87 expedia Reward points";
@@ -118,12 +99,7 @@ if (checkSignin == null) {
             
             document.getElementById("closePopup").addEventListener("click", function(){
                 popup.classList.remove("open-popup");
-            })
-            
-                
-
-            
-
+            }) 
         }
         else {
             alert("plese fill the requried feilds")

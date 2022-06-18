@@ -16,10 +16,13 @@ body {
 }
 
 #navbar>#logo {
-    margin-left: 260px;
+    margin-left: 100px;
     display: flex;
     align-items: center;
 
+}
+#navbar #personName{
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
 }
 
 #navbar>#username {
