@@ -11,9 +11,6 @@
     <link href="//db.onlinewebfonts.com/c/229a57bbeef591e04a1fdfe347c90864?family=Centra+No2" rel="stylesheet"
         type="text/css" />
 
-    <!-- reset css -->
-    <link rel="stylesheet" href="./reset.css">
-
     <!-- fav icon script file -->
     <script src="https://kit.fontawesome.com/e3e5135115.js" crossorigin="anonymous"></script>
 
@@ -142,11 +139,83 @@
             width: 90%;
             height: 296px;
             border: 1px solid #a7a7a7c9;
-            display: flex;
             margin: auto;
             margin-top: 48px;
             margin-bottom: 48px;
             border-radius: .5rem;
+            padding-top: 20px;
+        }
+
+        #searchBook ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%;
+            margin: auto;
+        }
+
+        #searchBook ul li {
+            list-style: none;
+            cursor: pointer;
+            margin-right: 5px;
+            padding-bottom: 5px;
+        }
+
+        #searchBook ul li:hover,
+        :active {
+            border-bottom: 2px solid #3662D8;
+            color: #3662D8;
+        }
+
+        #searchBook>.contentDiv {
+            padding: 50px;
+            display: flex;
+        }
+
+        #searchBook>.contentDiv>.search {
+            width: 50%;
+            margin-right: 10px;
+            border-radius: 8px;
+            border: 1px solid #a7a7a7c9;
+            padding: 14px 8px;
+        }
+
+        #searchBook>.contentDiv>.search>i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        #searchBook>.contentDiv>.search>input {
+            width: 90%;
+            border: none;
+            font-size: 16px;
+        }
+
+        #searchBook>.contentDiv>.checkin,.checkout {
+            width: 25%;
+            border-radius: 8px;
+            border: 1px solid #a7a7a7c9;
+            padding: 14px 8px;
+        }
+
+        #searchBook>.contentDiv>.checkout input {
+            border: none;
+            font-size: 16px;
+        }
+
+        
+        #searchBook>.contentDiv>.checkin input {
+            border: none;
+            font-size: 16px;
+        }
+
+        #searchBook>.contentDiv>.checkin,.checkout i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        #searchBook>.contentDiv>.search>input:active {
+            border: none;
         }
 
         .imagecontainer {
@@ -350,7 +419,7 @@
         }
 
         .newsletterCard>div {
-            padding: 10px 10px;
+            padding: 25px 10px;
         }
 
         .newsletterCard>div>h1 {
@@ -422,7 +491,7 @@
             text-decoration: underline;
         }
 
-        footer{
+        footer {
             width: 90%;
             margin: auto;
             display: grid;
@@ -430,30 +499,32 @@
         }
 
 
-        footer>div{
+        footer>div {
             display: flex;
             flex-direction: column;
         }
 
-        footer>div>img{
+        footer>div>img {
             width: 80%;
         }
-        footer>div>h2{
+
+        footer>div>h2 {
             font-size: .85rem;
             font-weight: 600;
             margin-bottom: 20px;
             color: #000000;
         }
 
-        footer>div>a{
+        footer>div>a {
             font-size: .75rem;
             margin-bottom: 15px;
         }
 
-        footer>div>a:hover{
+        footer>div>a:hover {
             text-decoration: underline;
         }
-        hr{
+
+        hr {
             width: 90%;
             margin: auto;
             margin-top: 20px;
@@ -461,13 +532,14 @@
             border: 1px solid #a7a7a7c9;
         }
 
-        .bottomFooter{
+        .bottomFooter {
             text-align: center;
+            font-size: .75rem;
             margin-top: 2rem;
             margin-bottom: 5rem;
         }
 
-        .bottomFooter>h6{
+        .bottomFooter>h6 {
             margin-bottom: 10px;
         }
     </style>
@@ -500,7 +572,30 @@
 
     <!-- search booking section -->
     <div id="searchBook">
+        <ul>
+            <li>Stays</li>
+            <li>Flights</li>
+            <li>Cars</li>
+            <li>Packages</li>
+            <li>Things to do</li>
+            <li>Cruises</li>
+        </ul>
 
+        <div class="contentDiv">
+            <div class="search">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="search" placeholder="going to">
+            </div>
+            <div class="checkin">
+                <i class="fa-solid fa-calendar-days"></i>
+                <input type="calender" placeholder="Check-in">
+            </div>
+
+            <div class="checkout">
+                <i class="fa-solid fa-calendar-days"></i>
+                <input type="calender" placeholder="Check-out">
+            </div>
+        </div>
     </div>
 
     <!-- text and main image -->
@@ -663,9 +758,11 @@
     </footer>
     <hr>
 
+    <!-- bottom footer part Expedia -->
     <div class="bottomFooter">
         <h6>Expedia, Inc. is not responsible for content on external Web sites.</h6>
-        <h6>© 2022 Expedia, Inc., an Expedia Group company. All rights reserved. Expedia and the Airplane Logo are trademarks or registered trademarks of Expedia, Inc. CST# 2029030-50.</h6>
+        <h6>© 2022 Expedia, Inc., an Expedia Group company. All rights reserved. Expedia and the Airplane Logo are
+            trademarks or registered trademarks of Expedia, Inc. CST# 2029030-50.</h6>
     </div>
 
 </body>
