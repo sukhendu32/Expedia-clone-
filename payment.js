@@ -11,6 +11,14 @@ let hotelTax = localStorage.getItem("totalTax");
 
 
 document.getElementById("priceSummary_nightCount").innerText = localStorage.getItem("noOfDays");
+document.getElementById("priceSummary_roomCount").innerText = localStorage.getItem("noOfroom");
+
+let checkIn=localStorage.getItem("checkInDate");
+let checkOut=localStorage.getItem("checkInDate");
+
+document.getElementById("duration_checkIn").innerText=checkIn.slice(0,15);
+document.getElementById("duration_checkOut").innerText=checkOut.slice(0,15);
+document.getElementById("duration_nightCount").innerText=localStorage.getItem("noOfDays");
 
 let roomPrice = document.getElementById("roomPrice_withoutTax");
 
@@ -26,7 +34,9 @@ totalPrice.innerText =Number(hotelPrice);
 document.getElementById("applypromoButton").addEventListener("click", function () {
     let promo = document.getElementById("PromoInput").value;
     if (promo === "SUMMER30") {
-        totalPrice.innerText = (Number(hotelPrice)* 0.7);
+        let final=Number(hotelPrice)* 0.7
+        let decimal=final.toFixed(2)
+        totalPrice.innerText = decimal;
     } else {
         alert("Invalid promo code")
     }
