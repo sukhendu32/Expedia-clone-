@@ -1,5 +1,15 @@
 
 
+let store=JSON.parse(localStorage.getItem("signInObj"));
+
+if(store!=null){
+
+   document.getElementById("localSignIn").innerText=store.signUpFirstName
+   document.getElementById("localSignUp").style.display="none";
+}
+
+
+
 amenities=[
     {icon:"fa-solid fa-person-swimming", text:"Pool"},
     {icon:"fa-regular fa-snowflake" , text:"Air conditioning"},
@@ -456,6 +466,7 @@ let totalMenupack=2750;
         pricePerNight.innerText= "Rs"+(ele.price + variablePrice);
 
         let z=(ele.price +variablePrice) * Number(noOfroom.value) * localStorage.getItem("noOfDays");
+        localStorage.setItem("totalTax", z*0.18)
 
         total.innerText="Rs"+ Math.ceil(z + 0.18*z) +" total";
         localStorage.setItem("totalExpense", Math.ceil(z*1.18));
@@ -498,7 +509,10 @@ let totalMenupack=2750;
         reserveDiv.id="reserveDiv";
         let reserveBtn=document.createElement("button");
         reserveBtn.innerText="Reserve a Room";
-        reserveDiv.append(reserveBtn);
+        reserveBtn.addEventListener("click", function(){
+          window.location.href="payment.html"
+        })
+        reserveDiv.append(reserveBtn);        
 
         expenseDiv.append(pricePerNight,total, p2,reserveDiv);
         divv.append(expenseDiv)

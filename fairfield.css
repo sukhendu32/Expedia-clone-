@@ -13,6 +13,116 @@ body{
     --font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-synthesis: none;
 }
+
+.buttonStyle {
+    background-color: #3662D8;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3662D8;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+#upperNav {
+    background-color: #343B53;
+    color: #fff;
+    padding: 15px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#upperNav a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#upperNav a:hover {
+    color: #3662D8;
+}
+
+
+nav {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px solid #a7a7a7c9;
+    padding-bottom: 10px;
+}
+
+nav>.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+}
+
+nav>.container>div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+nav>.container>div:first-child>img {
+    margin-right: 10px;
+}
+
+nav>.container>div:first-child>p {
+    font-weight: 600;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+nav>.container>div:last-child>a {
+    color: #000000;
+    margin-right: 25px;
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+
+nav>.container>div:last-child>a:hover {
+    color: #3662D8;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+nav>.container>div:last-child>a>i {
+    margin-right: 8px;
+}
+
 #overview{
     width: var(--width);
     margin: 50px auto; 
@@ -443,7 +553,159 @@ body{
     padding-right: 5px;
   }
 
+  .newsletterCard {
+    width: 80%;
+    margin: auto;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: 3fr 5fr 1fr;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #a7a7a7c9;
+    border-radius: 8px;
+}
 
+.newsletterCard>img {
+    width: 100%;
+}
+
+.newsletterCard>#bRadius {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.newsletterCard>div {
+    padding: 25px 10px;
+}
+
+.newsletterCard>div>h1 {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    margin-bottom: 7px;
+    color: #000000;
+}
+
+.newsletterCard>div>p {
+    font-size: .9rem;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.newsletterCard>div>h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.newsletterCard>div>h6 {
+    font-size: .8rem;
+    color: #000000;
+}
+
+.newsletterCard>div>div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+
+}
+
+.newsletterCard>div>div>input,
+select {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #a7a7a7c9;
+    padding: 14px 8px;
+}
+
+.newsletterCard>div>div>input {
+    width: 90%;
+}
+
+.newsletterCard>#qrcode {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.quote {
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+
+}
+
+.quote>p {
+    margin-bottom: 5px;
+    font-size: .9rem;
+}
+
+.quote>a {
+    font-size: .9rem;
+    text-decoration: underline;
+}
+
+footer {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer>div>img {
+    width: 80%;
+}
+
+footer>div>h2 {
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+footer>div>a {
+    font-size: .75rem;
+    margin-bottom: 15px;
+}
+
+footer>div>a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #a7a7a7c9;
+}
+
+.bottomFooter {
+    text-align: center;
+    font-size: .75rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.bottomFooter>h6 {
+    margin-bottom: 10px;
+}
+
+#searchHotel{
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 100px;
+}
 
 
 
