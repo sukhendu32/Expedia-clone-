@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>Goa</title> 
     <script src="https://kit.fontawesome.com/c5b4771c82.js" crossorigin="anonymous"></script>
   
     <style>
@@ -18,7 +18,121 @@
 
      /* navbar */
 
-        #navbar{
+     .buttonStyle {
+            background-color: #3662D8;
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #3662D8;
+        }
+
+        .container {
+            width: 90%;
+            display: flex;
+            align-items: center;
+        }
+
+        #upperNav {
+            background-color: #343B53;
+            color: #fff;
+            padding: 15px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        #upperNav a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        #upperNav a:hover {
+            color: #3662D8;
+        }
+
+
+        nav {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            width: 100%;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            border-bottom: 1px solid #a7a7a7c9;
+            padding-bottom: 10px;
+        }
+
+        nav>.container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            padding: 10px;
+        }
+
+        nav>.container>div:first-child {
+            display: flex;
+            align-items: center;
+        }
+
+        nav>.container>div:first-child>img {
+            margin-right: 10px;
+        }
+
+        nav>.container>div:first-child>p {
+            font-weight: 600;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        nav>.container>div:last-child>a {
+            color: #000000;
+            margin-right: 25px;
+            font-weight: 600;
+            letter-spacing: .4px;
+        }
+
+        nav>.container>div:last-child>a:hover {
+            color: #3662D8;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        nav>.container>div:last-child>a>i {
+            margin-right: 8px;
+        }
+     
+
+
+
+
+
+        /* #navbar{
           
             width: 98%; 
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -54,7 +168,7 @@
         
         #navbar>div+div>h4:hover{
             color: rgb(96, 96, 245);
-        }
+        } */
 
 
        /* search and date bar */
@@ -255,7 +369,7 @@
         }
         #main>div{
             width: 60%;
-            height: 275px;
+            height: 225px;
             background-color: white;
             border-radius: 15px;
             display: flex;           
@@ -311,7 +425,7 @@
         #addvert{            
             
             margin-left: 85%;
-            margin-top: -2950px;
+            margin-top: -2650px;
         }
         span{
             padding-left: 6px;
@@ -487,15 +601,40 @@
 
         a{
             /* border: 1px solid red; */
-            font-size: 40px;
+            /* font-size: 40px; */
             margin-bottom: 10px;
             margin-right: 40px;
         }    
  
+
+        #date{
+            margin-top: 25px;
+        }
     </style> 
 </head>
 <body>
-    <div id="navbar">
+
+
+<!-- navbar -->
+<nav>
+    <div class="container">
+        <div>
+            <img src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1&2" alt="logo">
+            <p>More travel </p>
+        </div>
+        <div>
+            <a href="#"><i class="fa-solid fa-globe"></i> English</a>
+            <a href="#">List your property</a>
+            <a href="#">Support</a>
+            <a href="#">Trips</a>
+            <a id="localSignIn" href="signIn.html">Sign In</a>
+            <a id="localSignUp" href="signUp.html">Sign Up</a>
+        </div>
+    </div>
+
+</nav>
+
+    <!-- <div id="navbar">
         <div>
             <img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" alt="error">
     
@@ -506,15 +645,15 @@
                 <option value="Banglore">Banglore</option>
                 <option value="Haiderabad">Haiderabad</option>
             </select>
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
             <h4><i class="fa-solid fa-globe"></i> English</h4>
             <h4>Support</h4>
             <h4>Trips</h4>
             <h4><i class="fa-solid fa-bell"></i></h4>
             <h4>Sign in</h4>
         </div>
-    </div>
+    </div> -->
 
     <div id="date">
         
@@ -546,46 +685,46 @@
 
     <div id="leftbox">
          
-        <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmecHRkEvsE3aLGch6Uw-MN7LYSXyC1LGodQ&usqp=CAU" alt="hotel">
-            <div>View in Map</div>
-        </div>
-         <h2>Filter By</h2>
-         <div>
-            <h3>Price per night</h3>
+                <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmecHRkEvsE3aLGch6Uw-MN7LYSXyC1LGodQ&usqp=CAU" alt="hotel">
+                <div>View in Map</div>
+                </div>
+                <h2>Filter By</h2>
+                <div>
+                <h3>Price per night</h3>
 
-         <div class="alignCheckbox">  <input type="checkbox"> <div> Less than 2000 </div></div> 
-         <div class="alignCheckbox">  <input type="checkbox"> <div>Rs.2000 To Rs.4000 </div></div>
-         <div class="alignCheckbox">   <input type="checkbox"> <div>Rs.4000 To Rs.8000 </div></div>
-         <div class="alignCheckbox">   <input type="checkbox"> <div>Rs.8000 To Rs.11000 </div></div>
-         <div class="alignCheckbox">   <input type="checkbox"> <div>Above Rs.11000  </div></div>
-         </div>
-         <div>
-            <h3>Guest Rating</h3>
- 
-            <div class="alignCheckbox">  <input type="radio"> <div> Any </div></div> 
-         <div class="alignCheckbox">  <input type="radio"> <div>Wonderful 4.5+ </div></div>
-         <div class="alignCheckbox">   <input type="radio"> <div>Very good 4+ </div></div>
-         <div class="alignCheckbox">   <input type="radio"> <div>Good 3.5+ </div></div>
-         </div>
-         <div>
-            <h3>Payment type</h3>
-  
-            <div class="alignCheckbox">  <input type="checkbox"> <div>Fully refundable </div></div> 
-            <div class="alignCheckbox">  <input type="checkbox"> <div>Reserve now, Pay later </div></div>
-         </div>
-         <div>
-            <h3>Area</h3>
+                <div class="alignCheckbox">  <input type="checkbox"> <div> Less than 2000 </div></div> 
+                <div class="alignCheckbox">  <input type="checkbox"> <div>Rs.2000 To Rs.4000 </div></div>
+                <div class="alignCheckbox">   <input type="checkbox"> <div>Rs.4000 To Rs.8000 </div></div>
+                <div class="alignCheckbox">   <input type="checkbox"> <div>Rs.8000 To Rs.11000 </div></div>
+                <div class="alignCheckbox">   <input type="checkbox"> <div>Above Rs.11000  </div></div>
+                </div>
+                <div>
+                <h3>Guest Rating</h3>
 
-            <div class="alignCheckbox">  <input type="radio"> <div> Panaji</div></div> 
-         <div class="alignCheckbox">  <input type="radio"> <div>Arpora </div></div>
-         <div class="alignCheckbox">   <input type="radio"> <div>Condolim </div></div>
+                <div class="alignCheckbox">  <input type="radio"> <div> Any </div></div> 
+                <div class="alignCheckbox">  <input type="radio"> <div>Wonderful 4.5+ </div></div>
+                <div class="alignCheckbox">   <input type="radio"> <div>Very good 4+ </div></div>
+                <div class="alignCheckbox">   <input type="radio"> <div>Good 3.5+ </div></div>
+                </div>
+                <div>
+                <h3>Payment type</h3>
+
+                <div class="alignCheckbox">  <input type="checkbox"> <div>Fully refundable </div></div> 
+                <div class="alignCheckbox">  <input type="checkbox"> <div>Reserve now, Pay later </div></div>
+                </div>
+                <div>
+                <h3>Area</h3>
+
+                <div class="alignCheckbox">  <input type="radio"> <div> Panaji</div></div> 
+                <div class="alignCheckbox">  <input type="radio"> <div>Arpora </div></div>
+                <div class="alignCheckbox">   <input type="radio"> <div>Condolim </div></div>
 
 
-         </div>
-         <div>
-            <h3>Property class</h3>
+                </div>
+                <div>
+                <h3>Property class</h3>
 
-            <div id="star">
+                <div id="star">
                 <div>1<i class="fa-solid fa-star"></i></div>
                 <div>2<i class="fa-solid fa-star"></i></div>
                 <div>3<i class="fa-solid fa-star"></i></div>
@@ -626,30 +765,30 @@
     </div>
 
      <!-- newsletter card -->
-     <div class="newsletterCard">
-        <img id="bRadius" src="https://a.travel-assets.com/mad-service/footer/bnaBanners/BEX_ROME_iStock_72dpi.jpg"
-            alt="newsletterCard">
-        <div>
-            <h1>Our app takes you further</h1>
-            <p>When you book on the app you can save up to 25% on select hotels while earning double the points with
+                <div class="newsletterCard">
+                <img id="bRadius" src="https://a.travel-assets.com/mad-service/footer/bnaBanners/BEX_ROME_iStock_72dpi.jpg"
+                alt="newsletterCard">
+                <div>
+                <h1>Our app takes you further</h1>
+                <p>When you book on the app you can save up to 25% on select hotels while earning double the points with
                 every booking. With these app deals you'll save even more on trips, and that means you can take more
                 trips, and manage it all on the go.</p>
-            <h2>Text yourself a download link for easy access</h2>
-            <div>
+                <h2>Text yourself a download link for easy access</h2>
+                <div>
                 <select name="Country Code" id="">
-                    <option value="">USA +1</option>
-                    <option value="">Ind +91</option>
-                    <option value="">USA +1</option>
+                <option value="">USA +1</option>
+                <option value="">Ind +91</option>
+                <option value="">USA +1</option>
                 </select>
                 <input type="number" placeholder="Phone Number">
                 <button class="buttonStyle">Get the app</button>
-            </div>
-            <h6>By providing your number, you agree to receive a one-time automated text message with a link to get the
+                </div>
+                <h6>By providing your number, you agree to receive a one-time automated text message with a link to get the
                 app. Standard text message rates may apply</h6>
-        </div>
-        <img id="qrcode" src="https://a.travel-assets.com/mad-service/qr-code/footer_qr_hp/1_QR_FOOTER_HP.png"
-            alt="qr code">
-    </div>
+                </div>
+                <img id="qrcode" src="https://a.travel-assets.com/mad-service/qr-code/footer_qr_hp/1_QR_FOOTER_HP.png"
+                alt="qr code">
+                </div>
 
     <!-- quote div -->
     <div class="quote">
@@ -715,6 +854,11 @@
 
 <script>
     var Data=[
+    
+
+
+
+
         {
             image:"https://images.trvl-media.com/hotels/3000000/2520000/2516300/2516280/36d90ef2.jpg?impolicy=resizecrop&rw=455&ra=fit",
             name:"Novotel Goa Dona Sylvia Hotel",

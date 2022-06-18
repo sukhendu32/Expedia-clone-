@@ -189,6 +189,7 @@
             width: 90%;
             border: none;
             font-size: 16px;
+             padding: 5px;
         }
 
         #searchBook>.contentDiv>.checkin,.checkout {
@@ -207,6 +208,7 @@
         #searchBook>.contentDiv>.checkin input {
             border: none;
             font-size: 16px;
+            padding: 5px;
         }
 
         #searchBook>.contentDiv>.checkin,.checkout i {
@@ -542,6 +544,13 @@
         .bottomFooter>h6 {
             margin-bottom: 10px;
         }
+
+        #searchHotel{
+            display: block;
+            text-align: center;
+            margin: auto;
+            width: 100px;
+        }
     </style>
 </head>
 
@@ -564,7 +573,8 @@
                 <a href="#">List your property</a>
                 <a href="#">Support</a>
                 <a href="#">Trips</a>
-                <a href="#">Sign In</a>
+                <a id="localSignIn" href="signIn.html">Sign In</a>
+                <a id="localSignUp" href="signUp.html">Sign Up</a>
             </div>
         </div>
 
@@ -584,18 +594,19 @@
         <div class="contentDiv">
             <div class="search">
                 <i class="fa-solid fa-location-dot"></i>
-                <input type="search" placeholder="going to">
+                <input type="search" id="goaPage" placeholder="going to">
             </div>
             <div class="checkin">
                 <i class="fa-solid fa-calendar-days"></i>
-                <input type="calender" placeholder="Check-in">
+                <input type="date" placeholder="Check-in">
             </div>
 
             <div class="checkout">
                 <i class="fa-solid fa-calendar-days"></i>
-                <input type="calender" placeholder="Check-out">
+                <input type="date" placeholder="Check-out">
             </div>
         </div>
+         <div id="searchHotel" class="buttonStyle">  Search</div>
     </div>
 
     <!-- text and main image -->
@@ -767,8 +778,29 @@
 
 </body>
 
-<script>
 
-</script>
 
 </html>
+
+
+<script>
+
+
+ document.querySelector("#searchHotel").addEventListener("click",function(){
+
+    let searchGoa= document.querySelector("#goaPage").value
+
+    if(searchGoa!="" || searchGoa=="goa"){
+        window.location.href="goa.html"
+    }   
+ })
+ 
+let store=JSON.parse(localStorage.getItem("signInObj"));
+
+ if(store!=null){
+
+    document.getElementById("localSignIn").innerText=store.signUpFirstName
+    document.getElementById("localSignUp").style.display="none";
+ }
+
+</script>
