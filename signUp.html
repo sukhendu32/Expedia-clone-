@@ -90,7 +90,7 @@
         cursor: pointer;
       }
       form > div:last-child {
-        margin: 10px auto 50px;
+        margin: 10px auto 0;
       }
       form > div:last-child > a {
         color: #3662d8;
@@ -105,12 +105,30 @@
         left: 10px;
         color: #3662d8;
       }
+      #continueWith{
+        width: 100%;
+        padding: 24px 24px 0;
+      }
+      #continueWith > div {
+        margin: 8px auto 24px;
+        max-width: 101px;
+        font-size: 14px;
+      }
+      #continueWith > div:last-child {
+        max-width: 90px;
+        display: flex;
+        justify-content: space-between;
+      }
     </style>
   </head>
   <body>
     <div id="logoStrip">
-      <i class="fa-solid fa-2x fa-arrow-left"></i>
-      <img src="https://www.expedia.co.in/_dms/interstitial/logo.svg?locale=en_GB&siteid=27" alt=""/>
+      <a href="index.html">
+        <i class="fa-solid fa-2x fa-arrow-left"></i>
+      </a>
+      <a href="index.html">
+        <img src="https://www.expedia.co.in/_dms/interstitial/logo.svg?locale=en_GB&siteid=27" alt=""/>
+      </a>
     </div>
     <div id="formContainer">
       <form>
@@ -149,6 +167,14 @@
         <div>Already have an a account? <a href="signin.html">Sing in</a></div>
       </form>
     </div>
+    <div id="continueWith">   
+      <div>or continue with</div>
+      <div>
+        <i class="fa-brands fa-lg fa-apple"></i>
+        <i class="fa-brands fa-lg fa-facebook-square"></i>
+        <i class="fa-brands fa-lg fa-google"></i>
+      </div>
+    </div>
   </body>
 </html>
 <script>
@@ -171,7 +197,7 @@
       alert(
         "Signup successful. Please sign in to continue"
       );
-      // window.location.href = "siunIn.html";
+      window.location.href = "siunIn.html";
     } else {
       alert("Account already exists with this email");
     }
