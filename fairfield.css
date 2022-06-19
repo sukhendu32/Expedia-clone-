@@ -125,7 +125,7 @@ nav>.container>div:last-child>a>i {
 
 #overview{
     width: var(--width);
-    margin: 50px auto; 
+    margin: auto; 
     background-color: white;   
 }
 #icon{
