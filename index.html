@@ -1197,31 +1197,31 @@
 
         let searchGoa = document.querySelector("#goaPage").value
 
-        if (searchGoa != "" || searchGoa == "goa") {
+        if ( searchGoa == "goa") {
             window.location.href = "goa.html"
         }
     })
 
     let store = JSON.parse(localStorage.getItem("signInObj"));
 
-<<<<<<< HEAD
-    if (store != null) {
-=======
-    if( searchGoa=="goa"){
-        window.location.href="goa.html"
-    }   
- })
+// <<<<<<< HEAD
+//     if (store != null) {
+// =======
+//     if( searchGoa=="goa"){
+//         window.location.href="goa.html"
+//     }   
+//  }
  
-let store=JSON.parse(localStorage.getItem("signInObj"));
+// let store=JSON.parse(localStorage.getItem("signInObj"));
 
- if(store!=null){
+//  if(store!=null){
 
-    document.getElementById("localSignIn").innerText=store.signUpFirstName
-    document.getElementById("localSignUp").style.display="none";
- }
->>>>>>> d26d49ae98890673b9378655734266effea034df
+//     document.getElementById("localSignIn").innerText=store.signUpFirstName
+//     document.getElementById("localSignUp").style.display="none";
+//  }
+// >>>>>>> d26d49ae98890673b9378655734266effea034df
 
         document.getElementById("localSignIn").innerText = store.signUpFirstName
         document.getElementById("localSignUp").style.display = "none";
-    }
+
 </script>
