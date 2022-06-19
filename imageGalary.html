@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallary</title>
+  <link rel="icon" href="https://shesheshow.com/wp-content/uploads/2019/07/GLobe-2.jpg">
+  <script src="https://kit.fontawesome.com/40eef63782.js" crossorigin="anonymous"></script>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    #hotel{
+      height: 50px;
+      padding: 10px;
+    }
+    #hotel>a{
+      text-decoration: none;
+      font-weight: 600;
+      color: #141d38;
+    }
+    #hotel > a > i{
+      color: #3662d8;
+    }
+    #sortBy{
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-direction: flex-start;
+      align-items: center;
+    }
+    #sortBy>div{
+      margin: 10px 5px 0;
+      padding: 5px 5px 10px;
+      color: #343b53;
+      font-weight: 500;
+    }
+    #sortBy>div:hover{
+      color: #3662d8;
+			cursor: pointer;
+    }
+    h3 {
+      max-width: 1100px;
+      margin: auto;
+      text-align: left;
+			/* margin-left: 5%; */
+			font-size: 32px;
+    }
+    #container{
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+    #container img {
+      width: 100%;
+      height: 100%;
+    }
+		hr {
+			color: red;
+			max-width: 1100px;
+			margin: auto;
+		}
+    @media all and (min-width: 570px) and (max-width: 1124px) {
+      body{padding: 0 30px;}
+      #sortBy {
+        max-width: 900px;
+      }
+      h3 {
+      max-width: 900px;
+      }
+      #container {
+        max-width: 900px;
+      }
+      hr {
+        max-width: 900px;
+      }
+    }
+    @media all and (min-width: 0px) and (max-width: 569px) {
+      body{padding: 0 30px;}
+      #sortBy {
+        max-width: 450px;
+      }
+      h3 {
+      max-width: 450px;
+      }
+      #container {
+        max-width: 450px;
+      }
+      hr {
+        max-width: 450px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="hotel">
+		<a href="fairfield.html">
+      <i class="fa-solid fa-arrow-left-long"></i> 
+      Fairfield by Marriott Goa Anjuna
+    </a>
+  </div>
+    <div id="sortBy">
+      <div class="photos">All photos</div>
+      <div class="photos">Rooms</div>
+      <div class="photos">Exterior</div>
+      <div class="photos">Common areas</div>
+      <div class="photos">Dining</div>
+      <div class="photos">Amenities</div>
+      <div class="photos">What's nearby</div>
+    </div>
+		<hr>
+    <h3>All photos</h3>
+    <div id="container">
+      <!-- append your divs here -->
+    </div>
+</body>
+<script>
+  let images=[
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/61ac74e1.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:""},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/649db8f5.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Exterior"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/52b4be52.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/d4719603.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/b819d2bc.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/c3ca2100.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/a0c53c7f.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:""},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/0a888927.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/46492f9f.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/853bfd79.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Exterior"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/56522fd3.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/5ade1f88.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/e1e4c105.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/ef7c0507.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/7db4b5d2.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Common areas"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/33063c50.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Amenities"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/8b9bb101.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Amenities"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/db875097.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Amenities"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/6e0b7db3.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Amenities"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/c0683a8a.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Amenities"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/2878f02b.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Amenities"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/88a3b1cb.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Amenities"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/08515069.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Amenities"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/1c8ccb5f.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Common areas"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/b5b3402a.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Common areas"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/d1cc2133.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Common areas"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/141e9535.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/a4403450.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/449c65d9.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/34f64bc1.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/ec4b1f9e.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/6e08cc57.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Common areas"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/b81b42e6.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/2afeb9c4.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/db5676a2.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/15eef8e3.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/cf3eac81.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Rooms"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/97b56904.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Common areas"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/0785d721.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/23eb5303.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/24abb0a9.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/668a3f65.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"What's nearby"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/e01e5d3e.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"Dining"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/817c9472.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:""},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/084fdb69.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:"What's nearby"},
+        {image: "https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/9eab9446.jpg?impolicy=resizecrop&rw=1200&ra=fit",type:""},
+    ]
+    
+	displayImages(images);
+
+	// function to display all the images
+  function displayImages(images){
+    images.forEach(function(ele){
+      let div=document.createElement("div");
+      let image=document.createElement("img");
+      image.src = ele.image;
+      div.append(image);
+      document.querySelector("#container").append(image);
+    });
+  };
+
+	// For filtering according to different categories
+  let divs=document.querySelectorAll(".photos");
+  divs.forEach(div=>{
+		div.addEventListener("click", sortIt);
+    function sortIt(){
+			if(div.innerText=="All photos"){
+				document.querySelector("#container").innerHTML = "";
+        displayImages(images)
+      }else{
+				let filtered=images.filter(element=>{
+					return element.type==div.innerText;
+				});
+				document.querySelector("#container").innerHTML = "";
+        displayImages(filtered);
+      }
+    }
+  })
+</script>
