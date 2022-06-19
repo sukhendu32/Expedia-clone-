@@ -193,15 +193,20 @@
     }
     let userObj = false;
     
-    for (let i = 0; i < userArrFromLS.length; i++) {
-      if (
-        signInData.signInEmail === userArrFromLS[i].signUpEmail &&
-        signInData.signInPassword === userArrFromLS[i].signUpPassword
-      ) {
-        userObj = userArrFromLS[i];
-        break;
+    if (!userArrFromLS) {
+      alert("Wrong credentials")
+    } else {
+      for (let i = 0; i < userArrFromLS.length; i++) {
+        if (
+          signInData.signInEmail === userArrFromLS[i].signUpEmail &&
+          signInData.signInPassword === userArrFromLS[i].signUpPassword
+        ) {
+          userObj = userArrFromLS[i];
+          break;
+        }
       }
-    };
+    }
+    
     if (userObj !== false) {
       localStorage.setItem("signInObj", JSON.stringify(userObj));
       alert("Signed in successfully.");
