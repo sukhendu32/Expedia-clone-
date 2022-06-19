@@ -773,3 +773,79 @@ body {
     font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif ;
     color: white;
 }
+
+
+@media all and (min-width:280px) and (max-width:800px){
+    #header{
+        width: 95%;
+        margin: auto;
+    }
+    #covidwarning{
+        width: 95%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    #freeCancel{
+        width: 95%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    #rating{
+        width: 95%;
+        margin: auto;
+    }
+    #body{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+    #body #leftbody{
+        order: 11;
+        width: 100%;
+    }
+    #body #rightbody{
+        order: 2;
+        width: 100%;
+    }
+    #hotelDetails #hotelImage{
+        height: 250px;
+    }
+    #hotelDetails #hotelImage>img{
+        height: 250px;
+    }
+    #hotelDetails #hotelImage {
+        position: relative;
+    }
+
+    #hotelDetails #hotelImage>h3{
+        position: absolute;
+        bottom: 15px;
+    }
+    #priceDetails{
+        margin-bottom: 15px;
+    }
+     #checkLogin #loginvalidation{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    #firstNameAndLastName{
+        width: 95%;
+        display: block;
+    }
+    #firstNameInput{
+        width: 100%;
+    }
+    #lastNameInput{
+        width: 94%;
+    }
+   #paymentData .paymentSafety{
+        display: block;
+    }
+    #paymentData form #cardName{
+        width: 95%;
+    }
+    #paymentData form .billingCountry{
+        width: 95%;
+    }
+}
