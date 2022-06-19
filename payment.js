@@ -14,7 +14,9 @@ document.getElementById("priceSummary_nightCount").innerText = localStorage.getI
 document.getElementById("priceSummary_roomCount").innerText = localStorage.getItem("noOfroom");
 
 let checkIn=localStorage.getItem("checkInDate");
-let checkOut=localStorage.getItem("checkInDate");
+let checkOut=localStorage.getItem("checkOutDate");
+
+let numTravellers=document.getElementById("numberOfTraveller").innerText= localStorage.getItem("noOfTravellers");
 
 document.getElementById("duration_checkIn").innerText=checkIn.slice(0,15);
 document.getElementById("duration_checkOut").innerText=checkOut.slice(0,15);

@@ -190,10 +190,11 @@
             width: 90%;
             border: none;
             font-size: 16px;
-             padding: 5px;
+            padding: 5px;
         }
 
-        #searchBook>.contentDiv>.checkin,.checkout {
+        #searchBook>.contentDiv>.checkin,
+        .checkout {
             width: 25%;
             border-radius: 8px;
             border: 1px solid #a7a7a7c9;
@@ -205,14 +206,15 @@
             font-size: 16px;
         }
 
-        
+
         #searchBook>.contentDiv>.checkin input {
             border: none;
             font-size: 16px;
             padding: 5px;
         }
 
-        #searchBook>.contentDiv>.checkin,.checkout i {
+        #searchBook>.contentDiv>.checkin,
+        .checkout i {
             font-size: 20px;
             margin-right: 10px;
         }
@@ -546,11 +548,417 @@
             margin-bottom: 10px;
         }
 
-        #searchHotel{
+        #searchHotel {
             display: block;
             text-align: center;
             margin: auto;
             width: 100px;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .imageCard>div:first-child {
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 45px;
+            }
+
+            .imageCard>div:last-child {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .newsletterCard {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .newsletterCard>img {
+                width: 100%;
+            }
+
+            .newsletterCard>div {
+                padding: 0;
+                padding-right: 10px;
+            }
+
+            .newsletterCard>div>h1 {
+                font-size: 1.5rem;
+                font-weight: 1000;
+                margin-bottom: 7px;
+                color: #000000;
+                margin-top: 4px;
+            }
+
+            .newsletterCard>div>div>input,
+            select {
+                display: none;
+            }
+
+            .newsletterCard>div>p {
+                font-size: .9rem;
+                margin-bottom: 25px;
+                color: #000000;
+            }
+
+            .newsletterCard>div>h2 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+                color: #000000;
+                display: none;
+
+            }
+
+            .newsletterCard>div>h6 {
+                font-size: .8rem;
+                color: #000000;
+                display: none;
+            }
+
+            .newsletterCard>div>div {
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 15px;
+
+            }
+
+            nav>.container>div>div>a {
+                font-size: .8rem;
+            }
+
+            nav>.container>div:last-child>a {
+                font-size: .8rem;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            nav>.container>div:first-child>p {
+                font-weight: 600;
+                margin-top: 5px;
+                margin-left: 0px;
+            }
+
+            #searchBook {
+                display: block;
+                text-align: center;
+                margin: auto;
+                height: auto;
+                padding-bottom: 25px;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+
+            #searchBook ul {
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                padding: 0px;
+                padding-left: 25px;
+            }
+
+            #searchBook ul li {
+                list-style: none;
+                cursor: pointer;
+                margin-right: 25px;
+                padding-bottom: 5px;
+                font-weight: bold;
+            }
+
+            #searchBook>.contentDiv {
+                padding: 20px;
+                display: flex;
+            }
+
+            #searchBook>.contentDiv>.search {
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #searchBook>.contentDiv>.search>i {
+                font-size: 20px;
+                margin-right: 0px;
+            }
+
+            #searchBook>.contentDiv>.checkin,
+            .checkout {
+                width: 33%;
+                border-radius: 8px;
+                border: 1px solid #a7a7a7c9;
+                padding: 14px 8px;
+            }
+
+            .imagecontainer div {
+                width: 90%;
+                margin-top: 65px;
+                margin-left: 4px;
+            }
+
+            .imagecontainer div h1 {
+                font-size: 2.5rem;
+                font-weight: 1000;
+                margin-bottom: 7px;
+                text-shadow: 0px 1px 2px rgb(0 11 38 / 80%);
+            }
+
+            .imagecontainer div p {
+                font-size: 1rem;
+                margin-bottom: 8px;
+                text-shadow: 0px 1px 2px rgb(0 11 38 / 80%);
+            }
+
+            .helpDiv>div>div>div>h3 {
+                font-size: 1.2rem;
+                font-weight: 800;
+                margin-bottom: 7px;
+            }
+
+            .newsletterCard>#qrcode {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .imageCard>div:first-child {
+                grid-template-columns: repeat(1, 1fr);
+                margin-top: 45px;
+            }
+
+            .imageCard>div:last-child {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .newsletterCard {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .newsletterCard>img {
+                width: 100%;
+            }
+
+            .newsletterCard>div {
+                padding: 0;
+                padding-right: 10px;
+            }
+
+            .newsletterCard>div>h1 {
+                font-size: 1.5rem;
+                font-weight: 1000;
+                margin-bottom: 7px;
+                color: #000000;
+                margin-top: 4px;
+            }
+
+            .newsletterCard>div>div>input,
+            select {
+                display: none;
+            }
+
+            .newsletterCard>div>p {
+                font-size: .9rem;
+                margin-bottom: 25px;
+                color: #000000;
+            }
+
+            .newsletterCard>div>h2 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+                color: #000000;
+                display: none;
+
+            }
+
+            .newsletterCard>div>h6 {
+                font-size: .8rem;
+                color: #000000;
+                display: none;
+            }
+
+            .newsletterCard>div>div {
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 15px;
+
+            }
+
+            nav>.container>div>div>a {
+                font-size: .8rem;
+            }
+
+            nav>.container>div:last-child>a {
+                font-size: .8rem;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .imagecontainer div h1 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 7px;
+                text-shadow: 0px 1px 2px rgb(0 11 38 / 80%);
+            }
+
+            .imagecontainer div p {
+                font-size: 1rem;
+                margin-bottom: 8px;
+                text-shadow: 0px 1px 2px rgb(0 11 38 / 80%);
+                width: 80%;
+            }
+
+            .imagecontainer div {
+                width: 100%;
+                margin-top: 32px;
+                margin-left: 4px;
+            }
+
+            .display-none {
+                display: none;
+            }
+
+            #searchBook>.contentDiv {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            #searchBook>.contentDiv>.search,
+            .checkin,
+            .checkout {
+                width: 100%;
+            }
+
+            #searchBook #checkIn {
+                width: 100%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            #searchBook>.contentDiv {
+                padding-right: 35px;
+            }
+
+            footer {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            footer div {
+                padding: 0;
+                margin-bottom: 15px;
+            }
+
+            #logoMain img {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .imageCard>div:first-child {
+                grid-template-columns: repeat(1, 1fr);
+                margin-top: 45px;
+            }
+
+            .imageCard>div:last-child {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .newsletterCard {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+
+            .newsletterCard>img {
+                width: 100%;
+            }
+
+            .newsletterCard>div {
+                padding: 0;
+                padding-right: 10px;
+            }
+
+            .newsletterCard>div>h1 {
+                font-size: 1.5rem;
+                font-weight: 1000;
+                margin-bottom: 7px;
+                color: #000000;
+                margin-top: 4px;
+            }
+
+            .newsletterCard>div>div>input,
+            select {
+                display: none;
+            }
+
+            .newsletterCard>div>p {
+                font-size: .9rem;
+                margin-bottom: 25px;
+                color: #000000;
+            }
+
+            .newsletterCard>div>h2 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+                color: #000000;
+                display: none;
+
+            }
+
+            .newsletterCard>div>h6 {
+                font-size: .8rem;
+                color: #000000;
+                display: none;
+            }
+
+            .newsletterCard>div>div {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            nav>.container>div>div>a {
+                font-size: .8rem;
+            }
+
+            nav>.container>div:last-child>a {
+                font-size: .8rem;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .imagecontainer div h1 {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            #searchBook ul li {
+                font-size: 13px;
+                margin-right: 10px;
+            }
+
+            .helpDiv>div {
+                grid-template-columns: repeat(1, 1fr)
+            }
+            .buttonStyle {
+                background-color: #3662D8;
+                border: none;
+                color: white;
+                padding: 10px 5px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+                font-weight: 500;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 8px;
+            }
+
+            .imagecontainer div {
+                width: 100%;
+                margin-top: 10px;
+                margin-left: 4px;
+            }
         }
     </style>
 </head>
@@ -570,10 +978,10 @@
                 <p>More travel </p>
             </div>
             <div>
-                <a href="#"><i class="fa-solid fa-globe"></i> English</a>
-                <a href="#">List your property</a>
-                <a href="#">Support</a>
-                <a href="#">Trips</a>
+                <a class="display-none" href="#"><i class="fa-solid fa-globe"></i> English</a>
+                <a class="display-none" href="#">List your property</a>
+                <a class="display-none" href="#">Support</a>
+                <a class="display-none" href="#">Trips</a>
                 <a id="localSignIn" href="signIn.html">Sign In</a>
                 <a id="localSignUp" href="signUp.html">Sign Up</a>
             </div>
@@ -597,7 +1005,7 @@
                 <i class="fa-solid fa-location-dot"></i>
                 <input type="search" id="goaPage" placeholder="going to">
             </div>
-            <div class="checkin">
+            <div id="checkIn" class="checkin">
                 <i class="fa-solid fa-calendar-days"></i>
                 <input type="date" placeholder="Check-in">
             </div>
@@ -607,7 +1015,7 @@
                 <input type="date" placeholder="Check-out">
             </div>
         </div>
-         <div id="searchHotel" class="buttonStyle">  Search</div>
+        <div id="searchHotel" class="buttonStyle"> Search</div>
     </div>
 
     <!-- text and main image -->
@@ -725,7 +1133,7 @@
 
     <!-- footer part Expedia -->
     <footer>
-        <div>
+        <div id="logoMain">
             <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
                 alt="">
         </div>
@@ -785,12 +1193,20 @@
 
 
 <script>
+    document.querySelector("#searchHotel").addEventListener("click", function () {
 
+        let searchGoa = document.querySelector("#goaPage").value
 
- document.querySelector("#searchHotel").addEventListener("click",function(){
+        if (searchGoa != "" || searchGoa == "goa") {
+            window.location.href = "goa.html"
+        }
+    })
 
-    let searchGoa= document.querySelector("#goaPage").value
+    let store = JSON.parse(localStorage.getItem("signInObj"));
 
+<<<<<<< HEAD
+    if (store != null) {
+=======
     if( searchGoa=="goa"){
         window.location.href="goa.html"
     }   
@@ -803,5 +1219,9 @@ let store=JSON.parse(localStorage.getItem("signInObj"));
     document.getElementById("localSignIn").innerText=store.signUpFirstName
     document.getElementById("localSignUp").style.display="none";
  }
+>>>>>>> d26d49ae98890673b9378655734266effea034df
 
+        document.getElementById("localSignIn").innerText = store.signUpFirstName
+        document.getElementById("localSignUp").style.display = "none";
+    }
 </script>
