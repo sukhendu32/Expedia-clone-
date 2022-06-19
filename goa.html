@@ -1,292 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
-    <script src="https://kit.fontawesome.com/c5b4771c82.js" crossorigin="anonymous"></script>
-  
-    <style>
-   
-        *{
-         font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
-        }
-        body{
-            background-color: #f8f5f4;
-        }
-         
-  
-        .buttonStyle {
-            background-color: #3662D8;
-            border: none;
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            font-weight: 600;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 8px;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/c5b4771c82.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      /* background-color: #f8f5f4 ;   */
 
-        a {
-            text-decoration: none;
-        }
+    }
 
-        a:hover {
-            color: #3662D8;
-        }
-
-        .container {
-            width: 90%;
-            display: flex;
-            align-items: center;
-        }
-
-        #upperNav {
-            background-color: #343B53;
-            color: #fff;
-            padding: 15px;
-            font-size: 14px;
-            text-decoration: none;
-        }
-
-        #upperNav a {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        #upperNav a:hover {
-            color: #3662D8;
-        }
+    /* navbar */
 
 
-        nav {
-            
-            margin-bottom: 20px;
-            background-color: #ffffff;
-            color: rgb(0, 0, 0);
-            width: 100%;
-            font-size: 14px;
-            text-decoration: none;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-            border-bottom: 1px solid #a7a7a7c9;
-            padding-bottom: 10px;
-        }
+    body {
 
-        nav>.container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: auto;
-            padding: 10px;
-        }
+      background-color: #f8f5f4;
 
-        nav>.container>div:first-child {
-            display: flex;
-            align-items: center;
-        }
+    }
 
-        nav>.container>div:first-child>img {
-            margin-right: 10px;
-        }
+    .buttonStyle {
+      background-color: #3662D8;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
 
-        nav>.container>div:first-child>p {
-            font-weight: 600;
-            margin-top: 5px;
-            margin-left: 20px;
-        }
+    a {
+      text-decoration: none;
+    }
 
-        nav>.container>div:last-child>a {
-            color: #000000;
-            margin-right: 25px;
-            font-weight: 600;
-            letter-spacing: .4px;
-        }
+    a:hover {
+      color: #3662D8;
+    }
 
-        nav>.container>div:last-child>a:hover {
-            color: #3662D8;
-            animation: blink 1s infinite;
-        }
+    .container {
+      width: 90%;
+      display: flex;
+      align-items: center;
+    }
 
-        @keyframes blink {
-            0% {
-                opacity: 0;
-            }
+    #upperNav {
+      background-color: #343B53;
+      color: #fff;
+      padding: 15px;
+      font-size: 14px;
+      text-decoration: none;
+    }
 
-            100% {
-                opacity: 1;
-            }
-        }
+    #upperNav a {
+      color: #fff;
+      text-decoration: underline;
+    }
 
-        nav>.container>div:last-child>a>i {
-            margin-right: 8px;
-        }
+    #upperNav a:hover {
+      color: #3662D8;
+    }
 
 
+    nav {
 
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      width: 100%;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      border-bottom: 1px solid #a7a7a7c9;
+      padding-bottom: 10px;
+    }
 
-     /* navbar */
-/*
+    nav>.container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+      padding: 10px;
+    }
 
-       /* search and date bar */
+    nav>.container>div:first-child {
+      display: flex;
+      align-items: center;
+    }
 
+    nav>.container>div:first-child>img {
+      margin-right: 10px;
+    }
 
-        #date{
-            height: 50px;
-            width: 80%;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-evenly;
-        }
-        #date>input{
-            font-size: 18px;
-            border-radius: 10px;
-        }
-        
-       
-        #date>p:first-child>input{
-           
-            margin-left: -12px;
-            padding-left: 40px;
-            width: 350px;
-            height: 50px;
-            margin-top: -15px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 10px;
-        }
+    nav>.container>div:first-child>p {
+      font-weight: 600;
+      margin-top: 5px;
+      margin-left: 20px;
+    }
 
-        #date>p:nth-child(1)>i{
-            position: absolute;
-            margin-left: 10px;
+    nav>.container>div:last-child>a {
+      color: #000000;
+      margin-right: 25px;
+      font-weight: 600;
+      letter-spacing: .4px;
+    }
 
-        }
+    nav>.container>div:last-child>a:hover {
+      color: #3662D8;
+      animation: blink 1s infinite;
+    }
 
-        #date>p:nth-child(2)>input{
-            
-           
-            width: 120px;
-            height: 45px;
-            margin-top: -15px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 10px;
-            padding-left: 8px;
-        }
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
 
-        #date>p:nth-child(2)>i{
-           position: absolute;  
-          margin-left: -30px;
-        }
+      100% {
+        opacity: 1;
+      }
+    }
 
-        #date>p:nth-child(3)>input{
-           
-            width: 120px;
-            height: 45px;
-            margin-top: -15px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 10px;
-            padding-left: 8px;
-        }
-
-        #date>p:nth-child(3)>i{
-            position: absolute;
-             
-          margin-left: -30px;
-        }
-        
-      
-        #date>select{
-            width: 240px;
-            font-size: 18px;
-            padding: 0px 20px;
-            border-radius: 10px;
-            border: 2px solid black;
-        }
-        #date>button{
-            border: none;
-            width: 120px;
-            font-size:18px;
-            background-color: #3662d8 ;
-            color: white;
-            border-radius: 10px;
-            margin-right: -20px;
-            padding: 0px 20px;
-        }
-
- 
-        /* sort by price and rating  */
-
-        #sortopt{
-            margin: auto;
-            margin-bottom: 0px;
-            width: 60%;
-            height: 50px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-         #sortopt>div:first-child{
-            display: flex;
-
-            margin-top: 15px;
-         }
-        
-         #sortopt>div:first-child>div{
-            margin-right: 6px;
-            font-size: 18px;
-            font-weight: 700;
-         }
-
-         #sortopt>div:first-child>i{
-            margin-top: 3px;
-         }
-
-        #sortopt>select{
-
-            border-radius: 10px;
-            width: 35%;
-            font-size: 15px;
-            font-weight: bold;
-            color: gray;
-        }
-
-        #sortopt>select>option{
-            font-size: 15px;
-            font-weight: bold;
-            color: gray;
-        }
+    nav>.container>div:last-child>a>i {
+      margin-right: 8px;
+    }
 
 
 
-          /* checkbox left div */
+    #date {
+      /* border: 1px solid red; */
+    }
 
-            .alignCheckbox{
-            display: flex;
-            margin-top: 6px;
-            }
-            .alignCheckbox>div{
-            padding-left: 8px;
+    #date {
+      height: 50px;
+      width: 80%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
 
-            }
+      justify-content: space-evenly;
+    }
+
+    #date>input {
+      font-size: 18px;
+      border-radius: 10px;
+    }
 
 
-        #leftbox>div>img{
-            margin: 0px;
-            width: 200px;
-            height: 150px;
-            margin-top: -50px;
-            
-        }
-        #leftbox>div:first-child>div{
-          /* border: 1px solid red; */
+
+    #date>p:first-child>input {
+
+      margin-left: -12px;
+      padding-left: 40px;
+      width: 350px;
+      height: 50px;
+      /* margin-top: -15px; */
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+    }
+
+    #date>p:nth-child(1)>i {
+      padding-top: 18px;
+      font-size: 17px;
+      position: absolute;
+      margin-left: 10px;
+
+    }
+
+    #date>p:nth-child(2)>input {
+
+
+      width: 120px;
+      height: 45px;
+      /* margin-top: -15px; */
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      padding-left: 8px;
+    }
+
+    #date>p:nth-child(2)>i {
+      padding-top: 18px;
+      font-size: 17px;
+      position: absolute;
+      margin-left: -30px;
+    }
+
+    #date>p:nth-child(3)>input {
+
+      width: 120px;
+      height: 45px;
+      /* margin-top: -15px; */
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      padding-left: 8px;
+    }
+
+    #date>p:nth-child(3)>i {
+      padding-top: 18px;
+      font-size: 17px;
+      position: absolute;
+
+      margin-left: -30px;
+    }
+
+
+    #date>select {
+      width: 240px;
+      font-size: 18px;
+      padding: 0px 20px;
+      border-radius: 10px;
+      /* border: 2px solid black; */
+    }
+
+    #date>button {
+      border: none;
+      width: 120px;
+      font-size: 18px;
+      background-color: #3662d8;
+      color: white;
+      border-radius: 10px;
+      margin-right: -20px;
+      padding: 0px 20px;
+    }
+
+
+
+    /* shorting */
+
+    #sortopt {
+
+      /* border: 1px solid black; */
+      margin: auto;
+      margin-bottom: 0px;
+      width: 60%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #sortopt>div:first-child {
+      display: flex;
+
+
+      margin-top: 15px;
+    }
+
+    #sortopt>div:first-child>div {
+      margin-right: 6px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    #sortopt>div:first-child>i {
+      margin-top: 3px;
+    }
+
+    #sortopt>select {
+
+      border-radius: 10px;
+      width: 35%;
+      font-size: 15px;
+      font-weight: bold;
+      color: gray;
+    }
+
+    #sortopt>select>option {
+      font-size: 15px;
+      font-weight: bold;
+      color: gray;
+    }
+
+
+
+    #main {
+      /* border: 2px solid red; */
+      width: 50%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      /* grid-template-rows: repeat(4,200px); */
+      gap: 15px;
+
+    }
+
+
+    #productBox {
+      /* border: 1px solid red; */
+      background-color: white;
+      border-radius: 10px;
+
+      width: 100%;
+      display: flex;
+    }
+
+
+    #left {
+      width: 40%;
+      height: 100%;
+      /* border: 1px solid red; */
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px 0px 0px 8px;
+    }
+
+
+    #right {
+      /* border: 2px solid black; */
+      width: 60%;
+      height: 100%;
+
+    }
+
+    h2 {
+      /* border: 1px solid green; */
+      padding-left: 10px;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      margin-top: 6px;
+    }
+
+    h3 {
+      /* border: 1px solid red; */
+      padding-left: 10px;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-weight: 100;
+      font-size: 13px;
+      padding-left: 10px;
+
+    }
+
+    h4 {
+      margin-top: 20px;
+      padding-left: 8px;
+      font-weight: 300;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0d7066;
+    }
+
+    h5 {
+
+      padding-left: 8px;
+      font-weight: 300;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0d7066;
+      font-size: 14px;
+
+    }
+
+    .rating {
+
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    h5+span {
+      /* margin-top: 20px; */
+      display: block;
+      margin-top: 17px;
+
+      /* border: 1px solid red; */
+    }
+
+    h1 {
+      text-align: right;
+      margin-top: -30px;
+      padding-right: 10px;
+      font-size: 25px;
+    }
+
+    p {
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      padding-left: 10px;
+      font-size: 14px;
+    }
+
+    #full {
+      margin-top: 30px;
+      /* border: 1px solid red; */
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #lt {
+
+      /* border: 4px solid black; */
+      width: 20%;
+    }
+
+    #main {
+      width: 60%;
+    }
+
+    #rt {
+      /* border: 4px solid teal; */
+      width: 15%;
+    }
+
+    /* leftbox */
+
+    .alignCheckbox {
+      display: flex;
+      margin-top: 6px;
+    }
+
+    .alignCheckbox>div {
+      padding-left: 8px;
+
+    }
+
+    #leftbox {
+
+      padding-left: 30px;
+
+    }
+
+    .title {
+      margin-top: 18px;   
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    #leftbox>div>img {
+      margin-top: -60px;
+      width: 86%;
+      height: 10%;
+      border-radius: 10px 10px 0px 0px;
+
+    }
+
+    #leftbox>div:first-child>div {
+      /* border: 1px solid red;  */
+      margin-left: 3px;
+      width: 86%;
+      text-align: center;
+      font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 500;
+      border-radius: 0px 0px 10px 10px;
+      margin-top: -3px;
+      color: rgb(139, 139, 241);
+      background-color: white;
+      padding: 5px 0px
+    }
+
+    /* #map{
+      width: 20%;
+    } */
+
+
+    /* #leftbox>div:first-child>div{
+          
           margin: 0px;
           text-align: center;
           font-weight: bold;
@@ -302,738 +488,765 @@
             width: 17%;
             
             margin-left: 30px;
-        }
+        }  */
 
-        #star{
-         display: flex;
-         flex-wrap: wrap;
-       }
-       #star>div{
-        border: 1px solid black;
-       background-color: white;
-        color: rgb(78, 77, 77);
-        padding: 8px;
-        margin-left: 5px;
-        margin-top: 5px;
-        border-radius: 10px;
-       }
-       #star>div:hover{
-        background-color: rgb(192, 188, 188);
-       }
+    #star {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-        
-       /* product div */
-  
+    #star>div {
+      /* border: 1px solid black; */
+      background-color: white;
+      color: rgb(78, 77, 77);
+      padding: 8px;
+      margin-left: 5px;
+      margin-top: 5px;
+      border-radius: 10px;
+    }
 
-        #main{
-            margin-top: -920px;           
-        }
-        #leftbox>div>input{
-            display: block;
-        }
-        #main>div{
-            width: 60%;
-            height: 225px;
-            background-color: white; 
-            border-radius: 15px;
-            display: flex;           
-            margin: auto;
-            margin-bottom: 25px;
-        }
-        #main>div>img{
-            border-radius: 15px 0px 0px 15px;
-            height: 225px;
-            margin-right: 10px;
-            width: 30%;
-        }
-        #main>div>img+div{
-            width: 55%;
-        }
-        #main>div>img+div>h1{
-            padding-left: 10px;
-            font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-weight: 600;
-            font-size: 20px;
-            margin-top: 6px;
-        }
-        #main>div>img+div>p{
-            padding-left: 10px;
-            font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-weight: 400;
-            font-size: 15px;
-            margin-bottom: 10px;
+    #star>div:hover {
+      background-color: rgb(192, 188, 188);
+    }
 
-        }
-        #main>div>div:last-child{
-            width: 15%;
-            height: auto;
-            margin: 130px 10px 10px 0px;
-        }
-        #main>div>div:last-child>button{
-            border: 0px;
-            width: 100%;
-            font-weight: bold;
-            background-color: rgb(13,112,102);
-            border-radius: 5px;
-            color: aliceblue;
-            padding: 5px 10px;
-            margin-bottom: -20px;
-        }
-        #main>div>div>h3{
-            color: rgb(13,112,102);
-            /* margin: -5px 0px; */
-        }
-        #main>div>div>h4:last-child{
-            margin: -20px 0px;
-        }
-        #addvert{            
-            
-            margin-left: 85%;
-            margin-top: -2880px;
-        }
-        span{
-            padding-left: 6px;
-        }
 
-       
-       
-      h3{
-        font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    .newsletterCard {
+      width: 90%;
+      margin: auto;
+      margin-top: 40px;
+      /* margin-top: 1750px; */
+      margin-bottom: 48px;
+      display: grid;
+      grid-template-columns: 3fr 5fr 1fr;
+      justify-content: space-between;
+      gap: 20px;
+      border: 1px solid #a7a7a7c9;
+      border-radius: 8px;
+    }
+
+    .newsletterCard>img {
+      width: 100%;
+    }
+
+    .newsletterCard>#bRadius {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .newsletterCard>div {
+      padding: 10px 10px;
+    }
+
+    .newsletterCard>div>h1 {
+      font-size: 1.5rem;
+      font-weight: 1000;
+      margin-bottom: 7px;
+      color: #000000;
+    }
+
+    .newsletterCard>div>p {
+      font-size: .9rem;
+      margin-bottom: 25px;
+      color: #000000;
+    }
+
+    .newsletterCard>div>h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #000000;
+    }
+
+    .newsletterCard>div>h6 {
+      font-size: .8rem;
+      color: #000000;
+    }
+
+    .newsletterCard>div>div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+
+    }
+
+    .newsletterCard>div>div>input,
+    select {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #a7a7a7c9;
+      padding: 14px 8px;
+    }
+
+    .newsletterCard>div>div>input {
+      width: 90%;
+    }
+
+    .newsletterCard>#qrcode {
+      width: 100%;
+      margin-top: 25px;
+    }
+
+    .quote {
+      width: 90%;
+      margin: auto;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      text-align: center;
+
+    }
+
+    .quote>p {
+      margin-bottom: 5px;
+      font-size: .9rem;
+    }
+
+    .quote>a {
+      font-size: .9rem;
+      text-decoration: underline;
+    }
+
+    footer {
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+
+    footer>div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer>div>img {
+      width: 80%;
+    }
+
+    footer>div>h2 {
+      font-size: .85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    footer>div>a {
+      font-size: .75rem;
+      margin-bottom: 15px;
+    }
+
+    footer>div>a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #a7a7a7c9;
+    }
+
+    .bottomFooter {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    .bottomFooter>h6 {
+      margin-bottom: 10px;
+    }
+
+    #footHead {
+      margin-top: 0px;
+    }
+
+    #qrcode {
+
+      height: 40%;
+    }
+
+    #addvert {
+
+      margin-top: -150px;
+
+    }
+
+    #addvert>img {
+
+      width: 80%;
+
+    }
+
+
+
+    /* media query */
+
+
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+
+
+
+      
+
+
+      #date>select,
+      #date>button {
+        margin-top: 14px;
+        height: 50px;
+
       }
-     #main h3{
-        /* border: 1px solid red; */
-        font-size: 16px;
-        padding-left: 10px;
-        font-weight: 400;
-        margin-top: 47px;
-        font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-       } 
 
-       #main h4{
-        padding-left: 10px;
-        margin-top: -5px;
-        font-family:"Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-       }   
-
-       .newsletterCard {
-            width: 90%;
-            margin: auto;
-            margin-top: 1750px;
-            margin-bottom: 48px;
-            display: grid;
-            grid-template-columns: 3fr 5fr 1fr;
-            justify-content: space-between;
-            gap: 20px;
-            border: 1px solid #a7a7a7c9;
-            border-radius: 8px;
-        }
-
-        .newsletterCard>img {
-            width: 100%;
-        }
-
-        .newsletterCard>#bRadius {
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-        }
-
-        .newsletterCard>div {
-            padding: 10px 10px;
-        }
-
-        .newsletterCard>div>h1 {
-            font-size: 1.5rem;
-            font-weight: 1000;
-            margin-bottom: 7px;
-            color: #000000;
-        }
-
-        .newsletterCard>div>p {
-            font-size: .9rem;
-            margin-bottom: 25px;
-            color: #000000;
-        }
-
-        .newsletterCard>div>h2 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #000000;
-        }
-
-        .newsletterCard>div>h6 {
-            font-size: .8rem;
-            color: #000000;
-        }
-
-        .newsletterCard>div>div {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 25px;
-
-        }
-
-        .newsletterCard>div>div>input,
-        select {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid #a7a7a7c9;
-            padding: 14px 8px;
-        }
-
-        .newsletterCard>div>div>input {
-            width: 90%;
-        }
-
-        .newsletterCard>#qrcode {
-            width: 100%;
-            margin-top: 25px;
-        }
-
-        .quote {
-            width: 90%;
-            margin: auto;
-            margin-top: 60px;
-            margin-bottom: 60px;
-            text-align: center;
-
-        }
-
-        .quote>p {
-            margin-bottom: 5px;
-            font-size: .9rem;
-        }
-
-        .quote>a {
-            font-size: .9rem;
-            text-decoration: underline;
-        }
-
-        footer{
-            width: 90%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-        }
+      #date>p>input {
+        width: 100%;
+      }
 
 
-        footer>div{
-            display: flex;
-            flex-direction: column;
-        }
+      #sortopt {
 
-        footer>div>img{
-            width: 80%;
-        }
-        footer>div>h2{
-            font-size: .85rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #000000;
-        }
+        margin-top: 80px;
 
-        footer>div>a{
-            font-size: .75rem;
-            margin-bottom: 15px;
-        }
+      }
 
-        footer>div>a:hover{
-            text-decoration: underline;
-        }
-        hr{
-            width: 90%;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #a7a7a7c9;
-        }
+      #lt {
 
-        .bottomFooter{
-            text-align: center;
-            margin-top: 2rem;
-            margin-bottom: 5rem;
-        }
+        display: none;
+      }
 
-        .bottomFooter>h6{
-            margin-bottom: 10px;
-        }
+      #main {
+        width: 90%;
+      }
+
+      #rt {
+        /* border: 4px solid teal; */
+        display: none;
+      }
+    }
 
 
 
-        /* ancortag */
+    @media all and (min-width: 0px) and (max-width: 767px) {
 
-        a{
-            /* border: 1px solid red; */
-            /* font-size: 40px;
-            margin-bottom: 10px;
-            margin-right: 40px; */
-        }    
- 
-    </style> 
+      #productBox{
+        flex-direction: column;
+        width: 90%;
+      }
+      
+
+      #left{
+        width: 90%;
+      }
+      #left>img{
+        width: 100%;
+      }
+      
+      #right{
+        width: 90%;
+      }
+
+            #date{
+              display: none;
+            }
+
+            #sortopt {
+
+              margin-top: 80px;
+
+            }
+
+            #lt {
+
+              display: none;
+            }
+
+            #main {
+              width: 90%;
+            }
+
+            #rt {
+              /* border: 4px solid teal; */
+              display: none;
+            }
+}
+
+  </style>
+
 </head>
+
 <body>
 
-       <!-- navbar -->
-    <nav>
-        <div class="container">
-            <div>
-                <img src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1&2" alt="logo">
-                <p>More travel </p>
-            </div>
-            <div>
-                <a href="#"><i class="fa-solid fa-globe"></i> English</a>
-                <a href="#">List your property</a>
-                <a href="#">Support</a>
-                <a href="#">Trips</a>
-                <a id="localSignIn" href="signIn.html">Sign In</a>
-                <a id="localSignUp" href="signUp.html">Sign Up</a>
-            </div>
+  <!-- navbar -->
+  <nav>
+    <div class="container">
+      <div>
+        <img src="https://www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1&2" alt="logo">
+        <p>More travel </p>
+      </div>
+      <div>
+        <a href="#"><i class="fa-solid fa-globe"></i> English</a>
+        <a href="#">List your property</a>
+        <a href="#">Support</a>
+        <a href="#">Trips</a>
+        <a id="localSignIn" href="signIn.html">Sign In</a>
+        <a id="localSignUp" href="signUp.html">Sign Up</a>
+      </div>
+    </div>
+
+  </nav>
+
+  <div id="date">
+
+    <p> <i class="fa-solid fa-location-dot"></i><input type="search" placeholder="going to goa"></p>
+    <p> <input type="text" placeholder="check-in" onfocus="(this. type='date')"><i class="fa-solid fa-calendar-day"></i>
+    </p>
+    <p> <input type="text" placeholder="check-in" onfocus="(this. type='date')"><i class="fa-solid fa-calendar-day"></i>
+    </p>
+
+    <select name="select1" id="select1">
+      <option value="">1 Room + 2 travellers</option>
+      <option value="">2 Room + 2 travellers</option>
+    </select>
+
+
+    <button>Search</button>
+  </div>
+
+  <div id="sortopt">
+
+    <div>
+      <div>See how we pick our recommended properties</div><i class="fa-solid fa-circle-info"></i>
+    </div>
+    <select name="select" onchange="rearrange()" id="selectPrice">
+      <option value="">sort by Recommended</option>
+      <option value="low">Low to High</option>
+      <option value="high">High to Low</option>
+      <option value="rating">Rating</option>
+    </select>
+  </div>
+
+  <!-- 
+    <select onchange="rearrange()" name="" id="selectPrice">
+        <option value="">Select by price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select> -->
+
+  <div id="full">
+    <div id="lt">
+
+
+      <div id="leftbox">
+
+        <div >
+          
+
+           <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmecHRkEvsE3aLGch6Uw-MN7LYSXyC1LGodQ&usqp=CAU"
+            alt="hotel">
+          <div>View in Map</div>
         </div>
-
-    </nav>
-
-
-
-    <!-- <div id="navbar">
+        <h2>Filter By</h2>
         <div>
-            <img src="https://www.expedia.co.in/_dms/header/logo.svg?locale=en_GB&siteid=27&2" alt="error">
-    
-            <select name="select" id="select">
-                <option value="">More travel</option>
-                <option value="Goa">Goa<i class="fa-solid fa-building" aria-hidden="true"></i></option>
-                <option value="New Delhi">New Delhi</option>
-                <option value="Banglore">Banglore</option>
-                <option value="Haiderabad">Haiderabad</option>
-            </select>
+          <h3 class="title">Price per night</h3>
+
+          <div class="alignCheckbox"> <input type="checkbox">
+            <div> Less than 2000 </div>
+          </div>
+          <div class="alignCheckbox"> <input type="checkbox">
+            <div>Rs.2000 To Rs.4000 </div>
+          </div>
+          <div class="alignCheckbox"> <input type="checkbox">
+            <div>Rs.4000 To Rs.8000 </div>
+          </div>
+          <div class="alignCheckbox"> <input type="checkbox">
+            <div>Rs.8000 To Rs.11000 </div>
+          </div>
+          <div class="alignCheckbox"> <input type="checkbox">
+            <div>Above Rs.11000 </div>
+          </div>
         </div>
         <div>
-            <h4><i class="fa-solid fa-globe"></i> English</h4>
-            <h4>Support</h4>
-            <h4>Trips</h4>
-            <h4><i class="fa-solid fa-bell"></i></h4>
-            <h4>Sign in</h4>
+          <h3 class="title">Guest Rating</h3>
+
+          <div class="alignCheckbox"> <input type="radio">
+            <div> Any </div>
+          </div>
+          <div class="alignCheckbox"> <input type="radio">
+            <div>Wonderful 4.5+ </div>
+          </div>
+          <div class="alignCheckbox"> <input type="radio">
+            <div>Very good 4+ </div>
+          </div>
+          <div class="alignCheckbox"> <input type="radio">
+            <div>Good 3.5+ </div>
+          </div>
         </div>
-    </div> -->
+        <div>
+          <h3 class="title">Payment type</h3>
 
-    <div id="date">
-        
-       <p> <i class="fa-solid fa-location-dot"></i><input type="search" placeholder= "going to goa"></p>
-      <p> <input type="text" placeholder="check-in" onfocus="(this. type='date')" ><i class="fa-solid fa-calendar-day"></i></p>  
-      <p> <input type="text" placeholder="check-in" onfocus="(this. type='date')" ><i class="fa-solid fa-calendar-day"></i></p> 
-        
-     <select name="select1" id="select1">
-            <option value="">1 Room + 2 travellers</option>
-            <option value="">2 Room + 2 travellers</option>
-        </select>
-
-    
-        <button>Search</button>
-    </div>
-
-    <div id="sortopt">
-        
-      <div>  <div>See how we pick our recommended properties</div><i class="fa-solid fa-circle-info"></i></div>
-        <select name="select" onchange="rearrange()" id="priceValue">
-            <option value="">sort by Recommended</option>
-            <option value="low">Low to High</option>
-            <option value="high">High to Low</option>
-            <option value="rating">Rating</option>
-        </select>
-    </div>
-       
-  
-
-    <div id="leftbox">
-         
-        <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmecHRkEvsE3aLGch6Uw-MN7LYSXyC1LGodQ&usqp=CAU" alt="hotel">
-            <div>View in Map</div>
+          <div class="alignCheckbox"> <input type="checkbox">
+            <div>Fully refundable </div>
+          </div>
+          <div class="alignCheckbox"> <input type="checkbox">
+            <div>Reserve now, Pay later </div>
+          </div>
         </div>
-         <h2>Filter By</h2>
-         <div>
-            <h3>Price per night</h3>
+        <div>
+          <h3 class="title">Area</h3>
 
-         <div class="alignCheckbox">  <input type="checkbox"> <div> Less than 2000 </div></div> 
-         <div class="alignCheckbox">  <input type="checkbox"> <div>Rs.2000 To Rs.4000 </div></div>
-         <div class="alignCheckbox">   <input type="checkbox"> <div>Rs.4000 To Rs.8000 </div></div>
-         <div class="alignCheckbox">   <input type="checkbox"> <div>Rs.8000 To Rs.11000 </div></div>
-         <div class="alignCheckbox">   <input type="checkbox"> <div>Above Rs.11000  </div></div>
-         </div>
-         <div>
-            <h3>Guest Rating</h3>
- 
-            <div class="alignCheckbox">  <input type="radio"> <div> Any </div></div> 
-         <div class="alignCheckbox">  <input type="radio"> <div>Wonderful 4.5+ </div></div>
-         <div class="alignCheckbox">   <input type="radio"> <div>Very good 4+ </div></div>
-         <div class="alignCheckbox">   <input type="radio"> <div>Good 3.5+ </div></div>
-         </div>
-         <div>
-            <h3>Payment type</h3>
-  
-            <div class="alignCheckbox">  <input type="checkbox"> <div>Fully refundable </div></div> 
-            <div class="alignCheckbox">  <input type="checkbox"> <div>Reserve now, Pay later </div></div>
-         </div>
-         <div>
-            <h3>Area</h3>
-
-            <div class="alignCheckbox">  <input type="radio"> <div> Panaji</div></div> 
-         <div class="alignCheckbox">  <input type="radio"> <div>Arpora </div></div>
-         <div class="alignCheckbox">   <input type="radio"> <div>Condolim </div></div>
+          <div class="alignCheckbox"> <input type="radio">
+            <div> Panaji</div>
+          </div>
+          <div class="alignCheckbox"> <input type="radio">
+            <div>Arpora </div>
+          </div>
+          <div class="alignCheckbox"> <input type="radio">
+            <div>Condolim </div>
+          </div>
 
 
-         </div>
-         <div>
-            <h3>Property class</h3>
+        </div>
+        <div>
+          <h3 class="title">Property class</h3>
 
-            <div id="star">
-                <div>1<i class="fa-solid fa-star"></i></div>
-                <div>2<i class="fa-solid fa-star"></i></div>
-                <div>3<i class="fa-solid fa-star"></i></div>
-                <div>4<i class="fa-solid fa-star"></i></div>
-                <div>5<i class="fa-solid fa-star"></i></div>
-            </div>
-            <!-- <input type="checkbox">LGBTQ welcoming
-            See properties that pledge to make all guests feel safe, welcome and respected.
-            <input type="checkbox">Business-friendly
-            See properties with amenities to help you work comfortably, like WiFi and breakfast.
-            <input type="checkbox">Family-friendly
-            See properties that include family essentials like in-room conveniences and activities for the kids. -->
-         </div>
+          <div id="star">
+            <div>1<i class="fa-solid fa-star"></i></div>
+            <div>2<i class="fa-solid fa-star"></i></div>
+            <div>3<i class="fa-solid fa-star"></i></div>
+            <div>4<i class="fa-solid fa-star"></i></div>
+            <div>5<i class="fa-solid fa-star"></i></div>
+          </div>
+
+        </div>
+      </div>
+
+
+
     </div>
-   
     <div id="main">
 
-        
-        <!-- <div>
-            <img src="https://images.trvl-media.com/hotels/20000000/19220000/19218500/19218418/8be2ba2b.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="error">
-            <div>
-                <h1 class="name">Le Meridien Goa, Calangute</h1>
-                <p>Calangute</p>
-                <p>services</p>
-                <h3>fully refundable</h3>
-                <h4> 4.4/5 </h4>
-                <h4>compliment</h4>
-            </div>
-            <div>
-                <button>we have left</button>
-                <h2>price</h2>
-            </div>
-        </div> -->
+
     </div>
-    <div id="addvert">
+
+    <div id="rt">
+
+      <div id="addvert">
         <img src="https://tpc.googlesyndication.com/simgad/611061976946598058?" alt="error">
         <img src="https://tpc.googlesyndication.com/simgad/17447823249981941085?" alt="error">
+      </div>
+
     </div>
 
-     <!-- newsletter card -->
-     <div class="newsletterCard">
-        <img id="bRadius" src="https://a.travel-assets.com/mad-service/footer/bnaBanners/BEX_ROME_iStock_72dpi.jpg"
-            alt="newsletterCard">
-        <div>
-            <h1>Our app takes you further</h1>
-            <p>When you book on the app you can save up to 25% on select hotels while earning double the points with
-                every booking. With these app deals you'll save even more on trips, and that means you can take more
-                trips, and manage it all on the go.</p>
-            <h2>Text yourself a download link for easy access</h2>
-            <div>
-                <select name="Country Code" id="">
-                    <option value="">USA +1</option>
-                    <option value="">Ind +91</option>
-                    <option value="">USA +1</option>
-                </select>
-                <input type="number" placeholder="Phone Number">
-                <button class="buttonStyle">Get the app</button>
-            </div>
-            <h6>By providing your number, you agree to receive a one-time automated text message with a link to get the
-                app. Standard text message rates may apply</h6>
-        </div>
-        <img id="qrcode" src="https://a.travel-assets.com/mad-service/qr-code/footer_qr_hp/1_QR_FOOTER_HP.png"
-            alt="qr code">
-    </div>
+  </div>
 
-    <!-- quote div -->
-    <div class="quote">
-        <p>Be inspired and discover more with Expedia</p>
-        <a href="#">Discover new places and experiences</a>
+  <!-- newsletter card -->
+  <div class="newsletterCard">
+    <img id="bRadius" src="https://a.travel-assets.com/mad-service/footer/bnaBanners/BEX_ROME_iStock_72dpi.jpg"
+      alt="newsletterCard">
+    <div>
+      <h1 id="footHead">Our app takes you further</h1>
+      <p>When you book on the app you can save up to 25% on select hotels while earning double the points with
+        every booking. With these app deals you'll save even more on trips, and that means you can take more
+        trips, and manage it all on the go.</p>
+      <h2>Text yourself a download link for easy access</h2>
+      <div>
+        <select name="Country Code" id="">
+          <option value="">USA +1</option>
+          <option value="">Ind +91</option>
+          <option value="">USA +1</option>
+        </select>
+        <input type="number" placeholder="Phone Number">
+        <button class="buttonStyle">Get the app</button>
+      </div>
+      <h6>By providing your number, you agree to receive a one-time automated text message with a link to get the
+        app. Standard text message rates may apply</h6>
     </div>
+    <img id="qrcode" src="https://a.travel-assets.com/mad-service/qr-code/footer_qr_hp/1_QR_FOOTER_HP.png"
+      alt="qr code">
+  </div>
 
-    <!-- footer part Expedia -->
-    <footer>
-        <div>
-            <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
-                alt="">
-        </div>
-        <div>
-            <h2>Company</h2>
-            <a href="#">About</a>
-            <a href="#">Jobs</a>
-            <a href="#">List your property</a>
-            <a href="#">Partnerships</a>
-            <a href="#">Newsroom</a>
-            <a href="#">Investor Relations</a>
-            <a href="#">Advertising</a>
-        </div>
-        <div>
-            <h2>Explore</h2>
-            <a href="#">United States of America travel guide</a>
-            <a href="#">Hotels in United States of America</a>
-            <a href="#">Vacation rentals in United States of America</a>
-            <a href="#">Vacation packages in United States of America</a>
-            <a href="#">Domestic flights</a>
-            <a href="#">Car rentals in United States of America</a>
-            <a href="#">All accommodation types</a>
-        </div>
-        <div>
-            <h2>Terms and Policies</h2>
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms of use</a>
-            <a href="#">Vrbo terms and conditions</a>
-            <a href="#">Expedia Rewards Terms</a>
-            <a href="#">Accessibility</a>
-            <a href="#">Do not sell my personal information</a>
-        </div>
-        <div>
-            <h2>Help</h2>
-            <a href="#">Support</a>
-            <a href="#">Cancel your hotel or vacation rental booking</a>
-            <a href="#">Cancel your flight</a>
-            <a href="#">Refund timelines, policies & processes</a>
-            <a href="#">Use an Expedia coupon</a>
-            <a href="#">International travel documents</a>
-        </div>
-    </footer>
-    <hr>
+  <!-- quote div -->
+  <div class="quote">
+    <p>Be inspired and discover more with Expedia</p>
+    <a href="#">Discover new places and experiences</a>
+  </div>
 
-    <div class="bottomFooter">
-        <h6>Expedia, Inc. is not responsible for content on external Web sites.</h6>
-        <h6>© 2022 Expedia, Inc., an Expedia Group company. All rights reserved. Expedia and the Airplane Logo are trademarks or registered trademarks of Expedia, Inc. CST# 2029030-50.</h6>
+  <!-- footer part Expedia -->
+  <footer>
+    <div>
+      <img
+        src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
+        alt="">
     </div>
-  
+    <div>
+      <h2>Company</h2>
+      <a href="#">About</a>
+      <a href="#">Jobs</a>
+      <a href="#">List your property</a>
+      <a href="#">Partnerships</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Advertising</a>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <a href="#">United States of America travel guide</a>
+      <a href="#">Hotels in United States of America</a>
+      <a href="#">Vacation rentals in United States of America</a>
+      <a href="#">Vacation packages in United States of America</a>
+      <a href="#">Domestic flights</a>
+      <a href="#">Car rentals in United States of America</a>
+      <a href="#">All accommodation types</a>
+    </div>
+    <div>
+      <h2>Terms and Policies</h2>
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Vrbo terms and conditions</a>
+      <a href="#">Expedia Rewards Terms</a>
+      <a href="#">Accessibility</a>
+      <a href="#">Do not sell my personal information</a>
+    </div>
+    <div>
+      <h2>Help</h2>
+      <a href="#">Support</a>
+      <a href="#">Cancel your hotel or vacation rental booking</a>
+      <a href="#">Cancel your flight</a>
+      <a href="#">Refund timelines, policies & processes</a>
+      <a href="#">Use an Expedia coupon</a>
+      <a href="#">International travel documents</a>
+    </div>
+  </footer>
+  <hr>
+
+  <div class="bottomFooter">
+    <h6>Expedia, Inc. is not responsible for content on external Web sites.</h6>
+    <h6>© 2022 Expedia, Inc., an Expedia Group company. All rights reserved. Expedia and the Airplane Logo are
+      trademarks or registered trademarks of Expedia, Inc. CST# 2029030-50.</h6>
+  </div>
+
+
 
 </body>
+
 </html>
 
+
+
 <script>
-    var Data=[
-        {
-            image:"https://images.trvl-media.com/hotels/16000000/15520000/15518800/15518705/61ac74e1.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Fairfield by Marriott Goa Anjuna",
-            place:"Anjuna",
-            services:"Free WiFi + Spa + Air conditioned",
-            payserv:"Fully refundable, Reserve now, pay later",
-            rating:4.1,
-            price:5549,
-            link:"fairfield.html"
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/3000000/2520000/2516300/2516280/36d90ef2.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Novotel Goa Dona Sylvia Hotel",
-            place:"Cavelossim",
-            services:"Free WiFi + Spa + Air conditioned",
-            payserv:"Fully refundable",
-            rating:4.3,
-            price:6800,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/1000000/440000/438400/438378/bdbe16ac.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"The Leela Goa ",
-            place:"Cavelossim",
-            services:"pool",
-            payserv:"Fully refundable, Reserve now, pay later",
-            rating:4.7,
-            price:29000,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/1000000/670000/663700/663615/08a8dd9d.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Taj Exotic Resort & Spa, Goa",
-            place:"Benaulim",
-            services:"Free WiFi + Spa + Air conditioned",
-            payserv:"Fully refundable, Reserve now, pay later",
-            rating:4.7,
-            price:23000,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/5000000/4480000/4474800/4474764/2e15d580.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Radisson Blu Resort Goa Cavelossim Beach",
-            place:"Cavelossim",
-            services:"Free WiFi + Spa + Air conditioned",
-            payserv:"Fully refundable, Reserve now, pay later",
-            rating:4.1,
-            price:8505,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/1000000/80000/70600/70518/dce1b7a5.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Bogmallo Beach Resort",
-            place:"Bogmallo",
-            services:"Free WiFi + Spa + Air conditioned",
-            payserv:"Fully refundable, Reserve now, pay later",
-            rating:3.6,
-            price:7500,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/1000000/930000/921600/921574/623993db.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"The LaLiT Golf & Spa Resort Goa",
-            place:"Palolem",
-            services:"Free WiFi + Spa + Air conditioned",
-            payserv:"Fully refundable",
-            rating:3.8,
-            price:10798,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/1000000/530000/526400/526340/f5764d77.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Taj Fort Aguada Resort & Spa, Goa",
-            place:"Aguada Fort Area",
-            services:"Breakfast Included + Spa + Air conditioned",
-            payserv:"Fully refundable",
-            rating:4.5,
-            price:20500,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/11000000/10550000/10547600/10547516/b5c4d061.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Planet Hollywood Goa Beach Resort",
-            place:"Uttorda",
-            services:"Free WiFi + Hot Tub + Air conditioned",
-            payserv:"Fully refundable, Reserve now, pay later",
-            rating:4.2,
-            price:9000,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/25000000/24050000/24041500/24041444/e8849892.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Azaya Beach Resort",
-            place:"Benaulim",
-            services:"Free WiFi + Spa + Air conditioned",
-            payserv:"Fully refundable, Reserve now, pay later",
-            rating:4,
-            price:17500,
-        },
-        {
-            image:"https://images.trvl-media.com/hotels/78000000/77160000/77152400/77152397/fe050728.jpg?impolicy=resizecrop&rw=455&ra=fit",
-            name:"Sea Breeze Max Resort & Spa",
-            place:"Fatrade",
-            services:"Free WiFi + Pool",
-            payserv:"Fully refundable, Reserve now, pay later",
-            rating:4.3,
-            price:3500,
-        },
-    ] 
-    
 
-    displayData(Data);
- 
-    function displayData(Data){
-        document.querySelector("#main").innerHTML="";
-        Data.forEach(function(ele){
-        var box=document.createElement("div");
 
-        box.addEventListener("click",hotel)
 
-        function hotel(){
-            if(ele.link!=undefined){
-                window.location.href=ele.link;
-            }
-            
+
+
+
+  let data = [
+    {
+      img: "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/70000000/69560000/69551900/69551801/dd25faec_b.jpg",
+      name: "Fairfield by Marriott Goa Benaulim",
+      area: "Benaulim",
+      rating: 4.4,
+      price: 6848,
+
+    },
+    {
+      img: "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/16000000/15520000/15518800/15518705/61ac74e1_b.jpg",
+      name: "Fairfield by Marriott Goa Anjuna",
+      area: "Anjuna",
+      rating: 4.2,
+      price: 4815,
+      link: "fairfield.html"
+    },
+    {
+      img: "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/20000000/19220000/19218500/19218418/8be2ba2b_b.jpg",
+      name: "Le Méridien Goa, Calangute",
+      area: "Calangute",
+      rating: 4.4,
+      price: 11199,
+    },
+    {
+      img: "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/1000000/530000/523000/522986/ec1730f3_b.jpg",
+      name: "Goa Marriott Resort & Spa",
+      area: "panaji",
+      rating: 4.5,
+      price: 14500,
+    },
+    {
+      img: "https://images.trvl-media.com/hotels/3000000/2520000/2516300/2516280/48a085d5.jpg?impolicy=resizecrop&rw=455&ra=fit",
+      name: "Novotel Goa Dona Sylvia Hotel",
+      area: "Cavelossim",
+      rating: 4.7,
+      price: 6800,
+    },
+    {
+      img: "https://images.trvl-media.com/hotels/1000000/440000/438400/438378/bdbe16ac.jpg?impolicy=resizecrop&rw=455&ra=fit",
+      name: "The Leela Goa",
+      area: "Cavelossim",
+      rating: 4.7,
+      price: 31500,
+    },
+    {
+      img: "https://images.trvl-media.com/hotels/1000000/670000/663700/663615/5bb5e9f8.jpg?impolicy=resizecrop&rw=455&ra=fit",
+      name: "Taj Exotica Resort & Spa, Goa",
+      area: "Benaulim",
+      rating: 4.7,
+      price: 23500,
+    },
+    {
+      img: "https://images.trvl-media.com/hotels/5000000/4480000/4474800/4474764/2e15d580.jpg?impolicy=resizecrop&rw=455&ra=fit",
+      name: "Radisson Blu Resort Goa Cavelossim Beach",
+      area: "Cavelossim",
+      rating: 4.1,
+      price: 8505,
+    },
+    {
+      img: "https://images.trvl-media.com/hotels/3000000/2190000/2185200/2185154/f6005842.jpg?impolicy=resizecrop&rw=455&ra=fit",
+      name: "Heritage Village Resort & Spa Goa",
+      area: "Arossim",
+      rating: 4.2,
+      price: 8499,
+    },
+    {
+      img: "https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/22000000/21430000/21429100/21429037/460fe046_b.jpg",
+      name: "Heritage Village Resort & Spa Goa",
+      area: "Chimbal",
+      rating: 4.2,
+      price: 8099,
+    },
+  ];
+
+
+
+
+  function rearrange() {
+    let inputData = data;
+    let val = document.querySelector("#selectPrice").value;
+
+    console.log("inside")
+
+    if (val == "low") {
+      inputData.sort(function (a, b) {
+        return a.price - b.price
+      })
+
+
+      cards(inputData)
+    }
+    else if (val == "high") {
+      inputData.sort(function (a, b) {
+        return b.price - a.price
+      })
+      cards(inputData)
+    }
+    else if (val == "rating") {
+      inputData.sort(function (a, b) {
+        return b.rating - a.rating
+      })
+      cards(inputData)
+    }
+
+  }
+
+
+  cards(data)
+
+  function cards(data) {
+    document.querySelector("#main").innerHTML = "";
+
+    data.forEach(function (elem) {
+
+      let box = document.createElement("div");
+      box.setAttribute("id", "productBox");
+
+      box.addEventListener("click", hotel)
+
+      function hotel() {
+
+        console.log("inside")
+        if (elem.link != undefined) {
+          window.location.href = elem.link;
         }
-        
 
-                    var image=document.createElement("img");
-                    image.setAttribute("src",ele.image);
-                    var div1=document.createElement("div");
-                    var name=document.createElement("h1");
-                    name.innerText=ele.name;
-                    var place=document.createElement("p");
-                    place.innerText=ele.place;
-                    let activity=document.createElement("span");
-                    activity.innerHTML=`<i class="fa-solid fa-person-swimming"></i>`
+      }
 
-                    let activityName=document.createElement("span");
-                    activityName.innerText="Pool"
+      let boxLeft = document.createElement("div");
+      boxLeft.setAttribute("id", "left");
 
-                    let breakfasticon=document.createElement("span");
-                    breakfasticon.innerHTML= `<i class="fa-solid fa-mug-saucer"></i>`
-
-                    let breakfast=document.createElement("span");
-                    breakfast.innerText="Breakfast"
-
-                    var payserv=document.createElement("h3");
-                    payserv.innerText=ele.payserv;
-            
-                var rate=document.createElement("h4");
-                rate.innerText=ele.rating+"/5";
-                var comp=document.createElement("h4");
-                if(Number(ele.rating)>=Number(4.5))
-                {comp.innerText="Exceptional"
-                comp.style.color="rgb(25,101,31)"}
-                else if(Number(ele.rating)>=Number(4.3))
-                {comp.innerText="Wonderful"
-                comp.style.color="#202976 "}
-                else if(Number(ele.rating)>=Number(4))
-                {comp.innerText="Very Good"
-                comp.style.color="rgb(234,147,44)"}
-                else if(Number(ele.rating)<Number(4))
-                {comp.innerText="Good"
-                comp.style.color="rgb(244,114,59)"}      
-                var div2=document.createElement("div");
-                var btn=document.createElement("button");
-                btn.innerText="only few left"
-                btn.style.fontSize="14px"
-
-               let ancor=document.createElement("a");
-               ancor.setAttribute("href","") 
-               ancor.innerText="clickme";  
-               ancor.style.color="white"; 
-                   
-               var price=document.createElement("h2");             
-               price.innerText="Rs "+Number(ele.price);
-                   
-            
-   
-
-          div1.append(name,place,activity,activityName,breakfasticon,breakfast,payserv,rate,comp);
-          div2.append(btn,price,ancor);
-          box.append(image,div1,div2);
-          document.querySelector("#main").append(box);
-        });
-}
-
-       
-// rearrange hotels according to price and rating
+      let image = document.createElement("img");
+      image.setAttribute("src", elem.img);
 
 
-function rearrange(){
-    let inputData=Data;
-    let val=document.querySelector("#priceValue").value;
-       
-     if(val=="low"){
-        inputData.sort(function(a,b){
-        return a.price-b.price
-       })
-    displayData(inputData)
-     }
 
-     else if(val=="high"){
-        inputData.sort(function(a,b){
-            return b.price-a.price
-        })
-       displayData(inputData)
-     }
-
-     else if(val=="rating"){
-        inputData.sort(function(a,b){
-            return b.rating-a.rating
-        })
-       displayData(inputData)
-     }
-     
-}
+      let boxRight = document.createElement("div");
+      boxRight.setAttribute("id", "right");
 
 
-let store=JSON.parse(localStorage.getItem("signInObj"));
 
 
-if(store!=null){
+      let hotelName = document.createElement("h2");
+      hotelName.innerText = elem.name;
 
-   document.getElementById("localSignIn").innerText=store.signUpFirstName
-   document.getElementById("localSignUp").style.display="none";
-}
+      let place = document.createElement("h3");
+      place.innerText = elem.area;
+
+      let activity = document.createElement("span");
+      activity.innerHTML = `<i class="fa-solid fa-person-swimming"></i>`
+
+      let activityName = document.createElement("span");
+      activityName.innerText = "Pool"
+
+      let breakfasticon = document.createElement("span");
+      breakfasticon.innerHTML = `<i class="fa-solid fa-mug-saucer"></i>`
+
+      let breakfast = document.createElement("span");
+      breakfast.innerText = "Breakfast"
+
+
+      let refund = document.createElement("h4");
+      refund.innerText = "Fully refundable"
+
+
+      let reserve = document.createElement("h5");
+      reserve.innerText = "Reserve Now,pay later"
+
+      let rate = document.createElement("span");
+      rate.innerText = elem.rating + "/5";
+      rate.setAttribute("class", "rating")
+
+      let rateMark = document.createElement("p"); {
+        if (elem.rating >= 4.5) {
+          rateMark.innerText = "Exceptional"
+        }
+        else if (elem.rating < 4.5 && elem.rating >= 3.5) {
+          rateMark.innerText = "Very Good"
+        } else {
+          rateMark.innerText = "Good"
+        }
+
+      }
+
+      let price = document.createElement("h1");
+      price.innerText = "Rs " + elem.price
+
+
+
+      boxLeft.append(image)
+      boxRight.append(hotelName, place, activity, activityName, breakfasticon, breakfast, refund, reserve, rate, price, rateMark)
+      box.append(boxLeft, boxRight)
+
+      document.querySelector("#main").append(box)
+    })
+
+  }
+
+
+  let store = JSON.parse(localStorage.getItem("signInObj"));
+
+
+  if (store != null) {
+
+    document.getElementById("localSignIn").innerText = store.signUpFirstName
+    document.getElementById("localSignUp").style.display = "none";
+  }
 
 </script>
